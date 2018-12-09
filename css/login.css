@@ -1,0 +1,65 @@
+body{
+	display: block;
+	margin: 0px;
+	height: 100%;
+}
+.content{
+	width: 100%;
+	/* margin-top: 20%; */
+	text-align: center;
+}
+.longin-boder{
+	width: 80%;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 10%;
+	line-height: 40px;
+	text-align: center;
+	/* border: 1px solid #dddddd; */
+	/* border-bottom: 1px solid #dddddd; */
+	/* border-radius: 5px;  */
+	/* background-color: #efefef; */
+}
+.image{
+	width: 30%;
+	/* margin-top: 5px; */
+	float: left;
+	text-align: right;
+}
+.input{
+	width: 60%;
+	float: left;
+	margin-left: 5%;
+	height: 37px;
+	line-height: 37px;
+	border:0px;
+	color: #333333;
+	font-size: 14px;
+	opacity:0.5;
+	filter:Alpha(opacity=50);
+	/* background-color: #efefef; */
+	
+}
+ 
+.button{
+	height: 40px;
+	width: 80%;
+	margin-top: 20px;
+	/* margin-left: 10%; */
+	font-size: 14px;
+	font-family: "微软雅黑";
+	/* font-weight: bold; */
+	line-height: 38px;
+	border-radius: 5px;
+	color: #ffffff;
+	background-color: #4CBCF0;
+	/* padding: 5px 10px;; */
+}
+ 
+.button:active {  
+	/* background-color:#37a3b9; */
+}
+
+.other_logon{
+	color: #999;
+}

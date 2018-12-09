@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>首页</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+        .swiper-container {
+        width: 100%;
+      } 
+
+      .swiper-container img {
+        display: block;
+        width: 100%;
+		height: 200px;
+      }
+	  .nav_gird .weui-grid{
+		  width: 20%;
+		  padding: 10px;
+	  }
+	  .weui-footer, .weui-grid__label{
+		font-size: 12px;
+	  }
+	  .weui-grid:before{
+		  border-right: 0px;
+	  }
+	  .weui-grid:after{
+		  border-bottom: 0px;
+	  }
+	  .weui-grid__icon{
+		  width: 40px;
+		  height: 40px;
+	  }
+	  .weui-media-box_appmsg .weui-media-box__hd{
+		  width: 50px;
+		  height: 50px;
+	  }
+	  .weui-media-box__desc{
+		  font-size: 12px;
+	  }
+	 .goods_grads .weui-grid__icon{
+	 	width: 80px;
+	 	height: 80px;
+	 }
+    </style>
+</head>
+
+<body ontouchstart>
+    <div class="weui-tab">
+        <div class="weui-tab__bd">
+            <div class="weui-tab__bd-item weui-tab__bd-item--active">
+                <div class="" style="overflow: hidden;clear: both;zoom: 1;height: 44px;">
+                    <div style="display: inline-block;float: left;background: #28D044;position: relative;width: 50px;height: 44px;text-align: center;line-height: 45px;color: white;font-size: 30px;">
+                        &nbsp;&nbsp;<i class="fa fa-genderless " aria-hidden="true"></i>
+                    </div>
+                    <div class="weui-search-bar" id="searchBar" style="width: 76%;background: #28D044;margin-left:0px ;">
+                        <form class="weui-search-bar__form" action="#">
+                            <div class="weui-search-bar__box">
+                                <!-- <i class="weui-icon-search"></i> -->
+                                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="" style="text-align: left;">
+                                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                            </div>
+                            <label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);text-align: left;">
+                                <!-- <i class="weui-icon-search"></i> -->
+                                <span style="margin-left: 10px;"> 搜索</span>
+                            </label>
+                        </form>
+                        <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel" style="color: white;">取消</a>
+                    </div>
+                    <div style="display: inline-block;float: right;background: #28D044;position: relative;width: 50px;height: 45px;text-align: center;line-height: 45px;top: -45px;right: 0px;color: white;">
+                        <i class="fa fa-envelope-o" aria-hidden="true" style="font-size: 20px;"></i>
+                        <span style="position: absolute;top: 8px;right: 8px;float: right;color: white;width: 15px;height:15px;background: red;font-size: 10px;border-radius: 20px;line-height: 15px;">1</span>
+                        <!-- <i class="fa fa-envelope-open-o" aria-hidden="true"></i> -->
+                    </div>
+                </div>
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="./images/swiper-1.jpg" /></div>
+						<div class="swiper-slide"><img src="./images/swiper-2.jpg" /></div>
+						<div class="swiper-slide"><img src="./images/swiper-3.jpg" /></div>
+					</div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="weui-grids nav_gird" style="border-bottom:1px solid #eee;">
+                                <a href="buttons.html" class="weui-grid js_grid">
+									<div class="weui-grid__icon">
+									  <img src="images/category/shucai.gif" alt="">
+									</div>
+									<p class="weui-grid__label">
+									  优选蔬菜
+									</p>
+								</a>
+                                <a href="cell.html" class="weui-grid js_grid">
+									<div class="weui-grid__icon">
+									  <img src="images/category/shuiguo.gif" alt="">
+									</div>
+									<p class="weui-grid__label">
+									  新鲜水果
+									</p>
+								  </a>
+                                <a href="form.html" class="weui-grid js_grid">
+									<div class="weui-grid__icon">
+									  <img src="images/category/rouqin.gif" alt="">
+									</div>
+									<p class="weui-grid__label">
+									  肉禽蛋类
+									</p>
+								  </a>
+                                <a href="flex.html" class="weui-grid js_grid">
+									<div class="weui-grid__icon">
+									  <img src="images/category/techan.gif" alt="">
+									</div>
+									<p class="weui-grid__label">
+									  土特产品
+									</p>
+								  </a>
+                                <a href="toast.html" class="weui-grid js_grid">
+									<div class="weui-grid__icon">
+									  <img src="images/category/liangyou.gif" alt="">
+									</div>
+									<p class="weui-grid__label">
+									  粮油副食
+									</p>
+								  </a>
+                                <a href="dialog.html" class="weui-grid js_grid">
+									<div class="weui-grid__icon">
+									  <img src="images/category/tiaowei.gif" alt="">
+									</div>
+									<p class="weui-grid__label">
+									  调味品
+									</p>
+								  </a>
+                                <a href="dialog.html" class="weui-grid js_grid">
+								  <div class="weui-grid__icon">
+								  	<img src="images/category/shuichanpin.gif" alt="">
+								  </div>
+								  <p class="weui-grid__label">
+								  	水产品
+								  </p>
+								  </a>
+                                <a href="dialog.html" class="weui-grid js_grid">
+								  <div class="weui-grid__icon">
+								  	<img src="images/category/jiushui.gif" alt="">
+								  </div>
+								  <p class="weui-grid__label">
+								  	酒水类
+								  </p>
+								  </a>
+                                <a href="dialog.html" class="weui-grid js_grid">
+								  <div class="weui-grid__icon">
+								  	<img src="images/category/tese.gif" alt="">
+								  </div>
+								  <p class="weui-grid__label">
+								  	特色小吃
+								  </p>
+								  </a>
+                                <a href="dialog.html" class="weui-grid js_grid">
+								  <div class="weui-grid__icon">
+								  	<img src="images/category/baojian.jpg" alt="">
+								  </div>
+								  <p class="weui-grid__label">
+								  	保健品
+								  </p>
+								  </a>
+                            </div>
+                            <div id="">
+                                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg" style="padding: 0px;">
+								<div class="weui-media-box__hd" style="margin-right:0px;margin-left: 5px;">
+									<img class="weui-media-box__thumb" src="images/toutiao.gif" alt="">
+								</div>
+								<div class="weui-media-box__bd" style="margin:5px;">
+									<h5 class="weui-media-box__title" style="font-size: 12px;"><i class="fa fa-eye" aria-hidden="true" style="color: red;"></i> 菜云线上生鲜超市正式上线啦</h5>
+									<p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+								</div>
+								<div class="weui-media-box__hd" style="width: 100px;margin: 0px;margin-right: 5px;">
+									<img class="weui-media-box__thumb" src="images/toutiaoright.png" alt="">
+								</div>
+								</a>
+                            </div>
+                            <div class="">
+                                <div class="weui-panel__ft" style="border-top: 1px solid #eee;">
+                                    <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
+										<div class="weui-cell__bd">时令果蔬</div>
+										<span class="weui-cell__ft">更多</span>
+									</a>
+                                </div>
+                                <div class="weui-grids goods_grads" style="border-bottom:1px solid #eee;">
+                                    <a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/goodsimg.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										小葱
+										</p>
+									</a>
+									<a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/lajiao.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										小辣椒
+										</p>
+									</a>
+									<a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/lianhuabai.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										莲花白
+										</p>
+									</a>
+                                </div>
+                                <div class="weui-panel__ft" style="border-top: 1px solid #eee;">
+                                    <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
+									<div class="weui-cell__bd">精品推荐</div>
+									<span class="weui-cell__ft">更多</span>
+								</a>
+                                </div>
+                                <div class="weui-grids goods_grads" style="border-bottom:1px solid #eee;">
+                                    <a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/goodsimg.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										小葱
+										</p>
+									</a>
+									<a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/lajiao.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										小辣椒
+										</p>
+									</a>
+									<a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/lianhuabai.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										莲花白
+										</p>
+									</a>
+                                </div>
+                                <div class="weui-panel__ft" style="border-top: 1px solid #eee;">
+                                    <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
+										<div class="weui-cell__bd">优选蔬菜</div>
+										<span class="weui-cell__ft">更多</span>
+									</a>
+			                   </div>
+                                <div class="weui-grids goods_grads" style="border-bottom:1px solid #eee;">
+                                    <a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/goodsimg.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										小葱
+										</p>
+									</a>
+									<a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/lajiao.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										小辣椒
+										</p>
+									</a>
+									<a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/lianhuabai.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										莲花白
+										</p>
+									</a>
+                         
+                                </div>
+                                <div class="weui-panel__ft" style="border-top: 1px solid #eee;">
+                                    <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
+										<div class="weui-cell__bd">新鲜水果</div>
+										<span class="weui-cell__ft">更多</span>
+									</a>
+                                </div>
+                                <div class="weui-grids goods_grads" style="border-bottom:1px solid #eee;">
+                                    <a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/goodsimg.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										小葱
+										</p>
+									</a>
+									<a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/lajiao.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										小辣椒
+										</p>
+									</a>
+									<a href="buttons.html" class="weui-grid js_grid">
+										<div class="weui-grid__icon">
+										<img src="images/lianhuabai.jpg" alt="">
+										</div>
+										<p class="weui-grid__label">
+										莲花白
+										</p>
+									</a>
+                                </div>
+                                <div class="weui-panel__ft" style="border-top: 1px solid #eee;margin-bottom: 50px;">
+                                    <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 0px;">
+						<div class="weui-cell__bd" style="text-align: center;background: #EEEEED;padding: 5px 0;">———————商品已加载完———————</div>
+						<!-- <span class="weui-cell__ft">更多</span> -->
+					</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-tabbar">
+                        <a href="index.html" class="weui-tabbar__item weui-bar__item--on">
+			<!-- <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span> -->
+			<div class="weui-tabbar__icon">
+				<i class="fa fa-home" aria-hidden="true"></i>
+			<!-- <img src="./images/icon_nav_button.png" alt=""> -->
+			</div>
+			<p class="weui-tabbar__label">首页</p>
+		  </a>
+                        <a href="cate_index.html" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon">
+				<i class="fa fa-list" aria-hidden="true"></i>
+			<!-- <img src="./images/icon_nav_msg.png" alt=""> -->
+			</div>
+			<p class="weui-tabbar__label">分类</p>
+		  </a>
+                        <a href="cart_index.html" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon">
+				<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+			<!-- <img src="./images/icon_nav_article.png" alt=""> -->
+			</div>
+			<p class="weui-tabbar__label">购物车</p>
+		  </a>
+                        <a href="user_index.html" class="weui-tabbar__item">
+			<div class="weui-tabbar__icon">
+				<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+			<!-- <img src="./images/icon_nav_cell.png" alt=""> -->
+			</div>
+			<p class="weui-tabbar__label">我</p>
+		  </a>
+                    </div>
+                </div>
+                <script src="./lib/jquery-2.1.4.js"></script>
+                <script src="./lib/fastclick.js"></script>
+                <script>
+                $(function() {
+                    FastClick.attach(document.body);
+                });
+                </script>
+                <script src="./js/jquery-weui.js"></script>
+                <script>
+                $("#a").select({
+                    title: "选择职业",
+                    items: ["法官", "医生", "猎人", "学生", "记者", "其他"]
+                });
+                </script>
+                <script src="./lib/fastclick.js"></script>
+                <script>
+                $(function() {
+                    FastClick.attach(document.body);
+                });
+                </script>
+                <script src="./js/swiper.js"></script>
+                <script>
+                $(".swiper-container").swiper({
+                    loop: true,
+                    autoplay: 3000
+                });
+                </script>
+</body>
+
+</html>

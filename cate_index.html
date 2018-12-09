@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>分类</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+
+	<link rel="stylesheet" href="./lib/weui.min.css">
+	<link rel="stylesheet" href="./css/jquery-weui.css">
+	<link rel="stylesheet" href="./css/demos.css">
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+	<style>
+		input,select,textarea{font-size:100%}
+		article,aside,footer,header,nav,section,audio,canvas,video,img {display: block;}
+		table{border-collapse:collapse;border-spacing:0}
+		fieldset,img{border:0}
+		abbr,acronym{border:0;font-variant:normal}
+		del{text-decoration:line-through}
+		address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}
+		ol,ul{list-style:none}
+		caption,th{text-align:left}
+		h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+		q:before,q:after{content:''}
+		button{outline:0;border:none;}
+		a:hover{text-decoration:none}
+		ins,a{text-decoration:none}
+		textarea {resize: none;}
+		iframe,img {border:0;}
+		img{display:block;width:100%;}
+		ul,ol {list-style:none;}
+		input,select,textarea {outline: 0;-webkit-user-modify: read-write-plaintext-only;}
+		input {-webkit-appearance: none;}
+		.pr{position:relative;}
+		.abs{position: absolute}
+		.fl{float:left;display:inline-block;}
+		.fr{float:right;display:inline-block;}
+		.clearfix:after{content:".";display:block;height:0;clear: both;visibility:hidden;}
+		.clearfix{*zoom:1;}
+		.wrap{min-width: 320px;max-width:768px;margin:0 auto;overflow:hidden;position:relative;}
+
+		.htit{line-height:1rem;padding:0 .3rem;color:#ff8e2e;font-size: .4rem;margin:1rem 0 .4rem 0}
+		.wrapper01 {position:relative;height: 1rem;width: 100%;overflow: hidden;margin:0 auto;border-bottom:1px solid #ccc}
+		.wrapper01 .scroller {position:absolute}
+		.wrapper01 .scroller li {height: 37px;color:#333;float: left;line-height: 37px;font-size: .4rem;text-align: center}
+		.wrapper01 .scroller li a{color:#333;display:block;margin:0 .3rem;position: relative;top: 6px;height: 25px;line-height: 25px;}
+		.wrapper01 .scroller li.cur a{    
+			color: white;
+			background: #28D044;
+			border-radius: 5px;
+			padding: 0px 5px;
+		}
+		.weui-cell_link{
+			color: black;
+		}
+		.current{
+			color: red;
+		}
+	</style>
+  </head>
+
+  <body ontouchstart>
+
+    <div class="weui-tab">
+      <div class="weui-tab__bd">
+        <div class="weui-tab__bd-item weui-tab__bd-item--active">
+          <div class="" style="overflow: hidden;clear: both;zoom: 1;height: 44px;">
+         
+          	<div class="weui-search-bar" id="searchBar" style="width: 100%;background: #28D044;margin-left:0px ;">
+          		<form class="weui-search-bar__form" action="#">
+          			<div class="weui-search-bar__box">
+          				<!-- <i class="weui-icon-search"></i> -->
+          				<input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="" style="text-align: left;">
+          				<a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+          			</div>
+          			<label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);text-align: left;">
+          				<!-- <i class="weui-icon-search"></i> -->
+          				<span style="margin-left: 10px;"> 搜索</span>
+          			</label>
+          		</form>
+          		<a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel" style="color: white;">取消</a>
+          	</div>
+          </div>
+		  <div class="wrapper wrapper01" id="retr">
+				<div class="scroller">
+					<ul class="clearfix">
+						<li><a href="javascript:void(0)">优选蔬菜</a></li>
+						<li><a href="javascript:void(0)">新鲜水果</a></li>
+						<li><a href="javascript:void(0)">肉禽蛋类</a></li>
+						<li><a href="javascript:void(0)">土特产品</a></li>
+						<li><a href="javascript:void(0)">粮油副食</a></li>
+						<li><a href="javascript:void(0)">调味品</a></li>
+						<li><a href="javascript:void(0)">水产品</a></li>
+						<li><a href="javascript:void(0)">酒水类</a></li>
+						<li><a href="javascript:void(0)">特色小吃</a></li>
+						<li><a href="javascript:void(0)">保健品</a></li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<div class="" style="width: 25%;display: inline-block;background: #d5d5d6;">
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
+						<div class="weui-cell__bd current">蔬菜类</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
+						<div class="weui-cell__bd">菌菇类</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
+						<div class="weui-cell__bd">水货类</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
+						<div class="weui-cell__bd">腌菜类</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
+						<div class="weui-cell__bd">其他</div>
+					</a>
+				</div>
+				<div class="" style="width: 74%;display: inline-block;float: right;overflow: scroll;height: 530px;margin-bottom: 30px;">
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="images/avatar.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 10px;font-size: 14px;font-weight: bold;">小辣椒</h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">配送仅限两城区范围内</h1>
+							<h1 style="padding-left: 10px;font-size: 10px;font-weight: bold;">售价:<span style="color: red;font-weight: bold;">￥12.00元/斤</span> <span style="font-weight: normal;font-size: 8px;">市场价:</span><s style="font-size: 8px;color: #888;font-weight: normal;">￥15元/斤</s></h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">已售12件</h1>
+						</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="images/avatar.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 10px;font-size: 14px;font-weight: bold;">小辣椒</h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">配送仅限两城区范围内</h1>
+							<h1 style="padding-left: 10px;font-size: 10px;font-weight: bold;">售价:<span style="color: red;font-weight: bold;">￥12.00元/斤</span> <span style="font-weight: normal;font-size: 8px;">市场价:</span><s style="font-size: 8px;color: #888;font-weight: normal;">￥15元/斤</s></h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">已售12件</h1>
+						</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="images/avatar.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 10px;font-size: 14px;font-weight: bold;">小辣椒</h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">配送仅限两城区范围内</h1>
+							<h1 style="padding-left: 10px;font-size: 10px;font-weight: bold;">售价:<span style="color: red;font-weight: bold;">￥12.00元/斤</span> <span style="font-weight: normal;font-size: 8px;">市场价:</span><s style="font-size: 8px;color: #888;font-weight: normal;">￥15元/斤</s></h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">已售12件</h1>
+						</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="images/avatar.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 10px;font-size: 14px;font-weight: bold;">小辣椒</h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">配送仅限两城区范围内</h1>
+							<h1 style="padding-left: 10px;font-size: 10px;font-weight: bold;">售价:<span style="color: red;font-weight: bold;">￥12.00元/斤</span> <span style="font-weight: normal;font-size: 8px;">市场价:</span><s style="font-size: 8px;color: #888;font-weight: normal;">￥15元/斤</s></h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">已售12件</h1>
+						</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="images/avatar.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 10px;font-size: 14px;font-weight: bold;">小辣椒</h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">配送仅限两城区范围内</h1>
+							<h1 style="padding-left: 10px;font-size: 10px;font-weight: bold;">售价:<span style="color: red;font-weight: bold;">￥12.00元/斤</span> <span style="font-weight: normal;font-size: 8px;">市场价:</span><s style="font-size: 8px;color: #888;font-weight: normal;">￥15元/斤</s></h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">已售12件</h1>
+						</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="images/avatar.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 10px;font-size: 14px;font-weight: bold;">小辣椒</h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">配送仅限两城区范围内</h1>
+							<h1 style="padding-left: 10px;font-size: 10px;font-weight: bold;">售价:<span style="color: red;font-weight: bold;">￥12.00元/斤</span> <span style="font-weight: normal;font-size: 8px;">市场价:</span><s style="font-size: 8px;color: #888;font-weight: normal;">￥15元/斤</s></h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">已售12件</h1>
+						</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="images/avatar.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 10px;font-size: 14px;font-weight: bold;">小辣椒</h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">配送仅限两城区范围内</h1>
+							<h1 style="padding-left: 10px;font-size: 10px;font-weight: bold;">售价:<span style="color: red;font-weight: bold;">￥12.00元/斤</span> <span style="font-weight: normal;font-size: 8px;">市场价:</span><s style="font-size: 8px;color: #888;font-weight: normal;">￥15元/斤</s></h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">已售12件</h1>
+						</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="images/avatar.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 10px;font-size: 14px;font-weight: bold;">小辣椒</h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">配送仅限两城区范围内</h1>
+							<h1 style="padding-left: 10px;font-size: 10px;font-weight: bold;">售价:<span style="color: red;font-weight: bold;">￥12.00元/斤</span> <span style="font-weight: normal;font-size: 8px;">市场价:</span><s style="font-size: 8px;color: #888;font-weight: normal;">￥15元/斤</s></h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">已售12件</h1>
+						</div>
+					</a>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="images/avatar.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 10px;font-size: 14px;font-weight: bold;">小辣椒</h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">配送仅限两城区范围内</h1>
+							<h1 style="padding-left: 10px;font-size: 10px;font-weight: bold;">售价:<span style="color: red;font-weight: bold;">￥12.00元/斤</span> <span style="font-weight: normal;font-size: 8px;">市场价:</span><s style="font-size: 8px;color: #888;font-weight: normal;">￥15元/斤</s></h1>
+							<h1 style="padding-left: 10px;font-size: 12px;color: #888;">已售12件</h1>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+        </div>
+    
+      </div>
+
+      <div class="weui-tabbar">
+      	<a href="index.html" class="weui-tabbar__item">
+      	<!-- <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;">8</span> -->
+      	<div class="weui-tabbar__icon">
+      		<i class="fa fa-home" aria-hidden="true"></i>
+      	<!-- <img src="./images/icon_nav_button.png" alt=""> -->
+      	</div>
+      	<p class="weui-tabbar__label">首页</p>
+      	</a>
+      	<a href="cate_index.html" class="weui-tabbar__item weui-bar__item--on">
+      	<div class="weui-tabbar__icon">
+      		<i class="fa fa-list" aria-hidden="true"></i>
+      	<!-- <img src="./images/icon_nav_msg.png" alt=""> -->
+      	</div>
+      	<p class="weui-tabbar__label">分类</p>
+      	</a>
+      	<a href="cart_index.html" class="weui-tabbar__item">
+      	<div class="weui-tabbar__icon">
+      		<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      	<!-- <img src="./images/icon_nav_article.png" alt=""> -->
+      	</div>
+      	<p class="weui-tabbar__label">购物车</p>
+      	</a>
+      	<a href="user_index.html" class="weui-tabbar__item">
+      	<div class="weui-tabbar__icon">
+      		<i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      	<!-- <img src="./images/icon_nav_cell.png" alt=""> -->
+      	</div>
+      	<p class="weui-tabbar__label">我</p>
+      	</a>
+      </div>
+    </div>
+
+    <script src="./lib/jquery-2.1.4.js"></script>
+<script src="./lib/fastclick.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/flexible.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/navbarscroll.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	//demo示例一到四 通过lass调取，一句可以搞定，用于页面中可能有多个导航的情况
+	$('.wrapper').navbarscroll();
+
+
+});
+</script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script src="./js/jquery-weui.js"></script>
+
+    <script>
+      $("#a").select({
+        title: "选择职业",
+        items: ["法官", "医生", "猎人", "学生", "记者", "其他"]
+      });
+    </script>
+  </body>
+</html>
