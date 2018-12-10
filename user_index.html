@@ -13,15 +13,340 @@
 <link rel="stylesheet" href="./css/jquery-weui.css">
 <link rel="stylesheet" href="./css/demos.css">
 <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-
+<!--<link rel="stylesheet" type="text/css" href="个人中心图标/font_dg2orjfgn1e/iconfont.css">-->
+<script src="个人中心图标/font_dg2orjfgn1e/iconfont.js"></script>
+<style>
+  .weui-grid.js_grid{
+    width: 20%;
+    font-size: 12px;
+  }
+ .weui-footer, .weui-grid__label{
+   font-size: 12px;
+ }
+ .nav{
+   background-image: url(img/jing.jpg);
+   background-position: -20px -150px;
+   height: 100px;
+   position: relative; 
+ }
+ .SheZhi{
+   width: 2em;height: 2em;
+   z-index: 20;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+ }
+ .nav .cont{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    left: 20px;   
+ }
+ .nav .cont img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+ }
+ .icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
+.weui-grids .icon{
+  width: 2em; height: 2em;
+}
+.nav .qiandao{
+   position: absolute;
+   top: 99px;
+   right: 18px;
+   background: #353535;
+   border: 1px solid;
+   border-radius:0 0 10px 10px;
+   color:#F7F7F7;
+   font-size: 12px;
+   line-height: 16px;
+   padding: 4px 1px 4px 1px;
+}
+.shoucang{
+  height: 70px;
+  font-size: 14px;
+}
+.shoucang .fl{
+   float: left;
+   width: 50%;
+   text-align: center;
+   margin-top: 10px;
+}
+.shoucang .fr{
+   float: left;
+   width: 50%;
+   text-align: center;
+   margin-top: 10px;
+   
+}
+.shoucang .icon{
+  width: 30px;
+  height: 30px;
+}
+.balance{
+   border-top: 2px solid antiquewhite;
+}
+.balance h2{
+  color: red;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.balance p{
+  font-size: 14px;
+  text-align: center;  
+}
+.balance img{
+   height: 35px;
+   padding-left: 9%;   
+}
+.weui-cell .weui-cell__bd{
+  margin-left: 10px;
+}
+.weui-cell.kongge{
+  border-bottom: 1px solid antiquewhite;
+}
+.marginTop{
+  background: antiquewhite;
+  height: 5px;
+}
+</style>
   </head>
+  
 
   <body ontouchstart>
 
     <div class="weui-tab">
       <div class="weui-tab__bd">
         <div class="weui-tab__bd-item weui-tab__bd-item--active">
-          <h1>页面一</h1>
+          
+          <!--代码块-->
+          <div class="nav">
+          	  <div class="cont">
+          	  	  <img src="img/touxiang.jpg"/>
+          	  </div>
+          	  <div class="qiandao">
+          	  	签<br />
+          	            到
+          	  </div>
+          	  
+          	    <img class="SheZhi" src="img/shezhi.png"/>	
+          	 
+          	 <script>
+          	     var BtnS = document.getElementsByClassName('SheZhi')[0];
+                 BtnS.onclick = function(){
+                   console.log(1);
+                 }
+                 
+          	 </script>
+          	 
+          	  
+          </div>
+          <div class="shoucang">
+            <div class="fl">
+            	  <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shoucang"></use>
+          </svg>
+          <p>收藏</p>
+            </div>
+            <div class="fr">
+            	  <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-footprint"></use>
+          </svg>
+          <p>浏览足迹</p>
+            </div>
+          </div>
+          
+           <div class="balance">
+                 <h2 align="center">115.20</h2>
+                 <p>账户余额（元）</p>
+                 <img src="images(1)/images/个人中心_03.gif" />
+                 <img src="images(1)/images/个人中心_05.jpg" />
+           </div>
+          <div class="weui-cells">
+  <div class="weui-cell">
+    <div class="weui-cell__hd"><img src=""></div>
+    <div class="weui-cell__bd">
+      <p>我的订单</p>
+    </div>
+    <div style="font-size: 12px;" class="weui-cell__ft">查看全部订单</div>
+    <a class="weui-cell weui-cell_access" href="javascript:;">
+				    <div class="weui-cell__ft">
+				    </div>
+				  </a>
+  </div>
+          <!--九宫格-->
+          <div class="weui-grids">
+          <a href="" class="weui-grid js_grid">
+         <div class="weui-grid__icon">
+         <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-daifukuan"></use>
+         </svg>
+         </div>
+         <p class="weui-grid__label">
+          待付款
+          </p>
+         </a>
+    <a href="" class="weui-grid js_grid">
+    <div class="weui-grid__icon">
+      <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-daifahuo"></use>
+      </svg>
+    </div>
+    <p class="weui-grid__label">
+      待发货
+    </p>
+  </a>
+  <a href="" class="weui-grid js_grid">
+    <div class="weui-grid__icon">
+      <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-daishouhuo"></use>
+      </svg>
+    </div>
+    <p class="weui-grid__label">
+      待收货
+    </p>
+  </a>
+  <a href="" class="weui-grid js_grid">
+    <div class="weui-grid__icon">
+      <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-daipingjia"></use>
+      </svg>
+    </div>
+    <p class="weui-grid__label">
+      待评价
+    </p>
+  </a>
+  <a href="" class="weui-grid js_grid">
+    <div class="weui-grid__icon">
+      <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-tuikuanshouhou"></use>
+      </svg>
+    </div>
+    <p class="weui-grid__label">
+      退款/售后
+    </p>
+  </a>
+  
+</div>
+<!--九宫格-->
+				 <div class="marginTop"></div>
+				  <div class="weui-cell kongge">
+				    <div class="weui-cell__hd">
+				    <svg class="icon jifen" aria-hidden="true">
+            <use xlink:href="#icon-jifen-dianji"></use>
+            </svg>
+				    </div>
+				    <div class="weui-cell__bd">
+				      <p>积分</p>
+				    </div>
+				    <a class="weui-cell weui-cell_access" href="javascript:;">
+				    <div class="weui-cell__ft">
+				    </div>
+				  </a>
+				  </div>
+				  
+        
+				    <div class="weui-cell kongge">
+				    <div class="weui-cell__hd">
+				    <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-fenxiaodingdan"></use>
+            </svg>
+				    </div>
+				    <div class="weui-cell__bd">
+				      <p>分销中心</p>
+				    </div>
+				    <a class="weui-cell weui-cell_access" href="javascript:;">
+				    <div class="weui-cell__ft">
+				    </div>
+				  </a>
+				  </div>
+         
+        
+				    <div class="weui-cell kongge">
+				    <div class="weui-cell__hd">
+				    <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shimingrenzheng"></use>
+            </svg>
+				    </div>
+				    <div class="weui-cell__bd">
+				      <p>实名认证</p>
+				    </div>
+				    <a class="weui-cell weui-cell_access" href="javascript:;">
+				    <div class="weui-cell__ft">
+				    </div>
+				  </a>
+				  </div>
+				  
+				  
+				    <div class="weui-cell kongge">
+				    <div class="weui-cell__hd">
+				    <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-gengduogongneng-caiwuguanli"></use>
+            </svg>
+				    </div>
+				    <div class="weui-cell__bd">
+				      <p>财务管理</p>
+				    </div>
+				    <a class="weui-cell weui-cell_access" href="javascript:;">
+				    <div class="weui-cell__ft">
+				    </div>
+				  </a>
+				  </div>
+				  
+				  <div class="weui-cell kongge">
+				    <div class="weui-cell__hd">
+				   <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-yijianfenxi"></use>
+            </svg>
+				    </div>
+				    <div class="weui-cell__bd">
+				      <p>意见与反馈</p>
+				    </div>
+				    <a class="weui-cell weui-cell_access" href="javascript:;">
+				    <div class="weui-cell__ft">
+				    </div>
+				  </a>
+				  </div>
+				  
+				  <div class="marginTop"></div>
+				 
+				  <div class="weui-cell">
+				    <div class="weui-cell__hd">
+				    <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shezhi"></use>
+            </svg>
+				    </div>
+				    <div class="weui-cell__bd">
+				      <p>设置</p>
+				    </div>
+				    <a class="weui-cell weui-cell_access" href="javascript:;">
+				    <div class="weui-cell__ft">
+				    </div>
+				  </a>
+				  </div>
+				  
+				  
+				  <div class="weui-cell">
+				    <div class="weui-cell__hd">
+				    <svg class="icon" aria-hidden="true">
+            <use xlink:href=""></use>
+            </svg>
+				    </div>
+				    <div class="weui-cell__bd">
+				      <p></p>
+				    </div>
+				    
+				  </div>
+          
+          <!--代码块-->
+          
         </div>
     
       </div>

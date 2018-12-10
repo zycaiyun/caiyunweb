@@ -13,15 +13,306 @@
 <link rel="stylesheet" href="./css/jquery-weui.css">
 <link rel="stylesheet" href="./css/demos.css">
 <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-
+<link rel="stylesheet" href="css/shopping.css" />
   </head>
-
   <body ontouchstart>
 
     <div class="weui-tab">
       <div class="weui-tab__bd">
         <div class="weui-tab__bd-item weui-tab__bd-item--active">
-          <h1>页面一</h1>
+          
+     <!--代码块-->
+     
+      <div class="nav">
+			  	<b class="b1">我的购物车<span style="font-size: 14px;">（2）</span></b>
+			  	
+	    </div>
+        <div class="weui-cells weui-cells_checkbox" >
+        <label class="weui-cell weui-check__label" for="s11">
+          <div class="weui-cell__hd">
+            <input type="checkbox" class="weui-check" name="checkbox1" id="s11">
+            <i class="weui-icon-checked"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>菜云自营   ></p>
+          </div>
+        </label>  
+       
+        <label class="weui-cell weui-check__label" for="s12">
+          <div class="weui-cell__hd">
+            <input type="checkbox" class="weui-check" name="checkbox1" id="s12">
+            <i class="weui-icon-checked"></i>
+          </div>
+             <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="img/蒜苗.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+						  <h1 style="padding-left: 20px;font-size: 12px;color: #888;">&nbsp;</h1>
+							<h1 style="padding-left: 20px;font-size: 14px;color: #000000;">红蒜苗</h1>
+							<h1 style="padding-left: 20px;font-size: 12px;color: #888;">&nbsp;</h1>
+							<h1 style="padding-left: 20px;font-size: 14px;color: red;font-weight: normal;">&yen; 0.70
+							  <del style="color: #c7c7c7; font-size: 12px;">0.84</del>
+							</h1>
+						</div>
+					</a>
+        </label> 
+        <div class="num">
+							 <button class="reduce" id="button1">-</button>
+							 <span class="UnitPrice" style="font-size: 14px;">1</span>
+							 <button class="increase" id="button2">+</button>
+				</div>
+      </div>  
+      
+      <div class="weui-cells weui-cells_checkbox">
+        <label class="weui-cell weui-check__label" for="s13">
+          <div class="weui-cell__hd">
+            <input type="checkbox" class="weui-check" name="checkbox1" id="s13">
+            <i class="weui-icon-checked"></i>
+          </div>
+          <div class="weui-cell__bd">
+            <p>菜云自营   ></p>
+          </div>
+        </label>  
+       
+        <label class="weui-cell weui-check__label" for="s14">
+          <div class="weui-cell__hd">
+            <input type="checkbox" class="weui-check" name="checkbox1" id="s14">
+            <i class="weui-icon-checked"></i>
+          </div>
+             <a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="padding: 10px 5px;">
+						<div style="height: 100px;line-height: 100px;width: 25%;">
+							<img src="img/白菜.jpg" style="width: 100%;height: 70%;margin: 15px 0px;">
+						</div>
+						<div class="weui-cell__bd" style="height: 100px;width: 75%;">
+							<h1 style="padding-left: 20px;font-size: 12px;color: #888;">&nbsp;</h1>
+							<h1 style="padding-left: 20px;font-size: 14px;color: #000000;">火锅白菜</h1>
+							<h1 style="padding-left: 20px;font-size: 12px;color: #888;">&nbsp;</h1>
+							<h1 style="padding-left: 20px;font-size: 14px;color: red;font-weight: normal;">&yen; 2.80
+							  <del style="color: #c7c7c7; font-size: 12px;">3.36</del>
+							</h1>
+							
+						</div>
+					</a>
+        </label>  
+        <div class="num">
+							 <button class="reduce" id="button3">-</button>
+							 <span class="UnitPrice" style="font-size: 14px;">1</span>
+							 <button class="increase" id="button4">+</button>
+				</div>
+      </div>  
+      <!--总结-->
+      <div id="summary">
+          <div class="weui-cells weui-cells_checkbox weui_all">
+        <!--复选框-->
+       
+        <label class="weui-cell weui-check__label summary"  for="s15">
+          <div class="weui-cell__hd">
+            <input type="checkbox" class="weui-check" name="checkbox1" id="s15">
+            <i class="weui-icon-checked"></i>
+          </div>
+               <b style="font-weight: normal;">全选</b>
+               <div class="price" style="font-size: 14px;">
+							               <b style="font-weight: normal">共节省</b> 
+							               <span style="color:gray">&yen;:<b style="font-weight: normal;" id="save">0</b>元</span><br/>
+							               <b style="font-weight: normal">合计</b> 
+							               <span style="color:red">&nbsp;&nbsp; &yen:<b style="font-weight: normal;" id="Total">0</b>元</span><br/>
+               </div>
+        </label> 
+      </div>  
+         <button class="btnJ">
+                 <span>去结算</span>
+               </button>
+      </div> 
+      <!--总结-->
+      <script type="text/javascript">
+        var All = document.getElementById('s15');
+        var S11 = document.getElementById('s11');
+        var S12 = document.getElementById('s12');
+        var S13 = document.getElementById('s13');
+        var S14 = document.getElementById('s14');
+        
+         var Btn1 = document.getElementById('button1');
+		     var Btn2 = document.getElementById('button2');
+		     var Btn3 = document.getElementById('button3');
+		     var Btn4 = document.getElementById('button4');
+		     var As = document.getElementsByClassName('UnitPrice')[0];//第一个数量
+		     var Ab = document.getElementsByClassName('UnitPrice')[1];//第二个数量
+		     
+		     var Save = document.getElementById('save');  //节省
+	       var total = document.getElementById('Total'); //节省
+		     
+        S11.onclick = function(){
+          if(S11.checked){
+            var a = Number(As.innerHTML);
+            var c = (a*14/100);
+            var f = (a*7/10);
+        		var e = c.toFixed(2);
+        		var h = f.toFixed(2);
+        		
+      		  Save.innerHTML = e;
+        		total.innerHTML = h;
+            S12.checked = true;
+          }else{
+            S12.checked = false;
+            if(S13.checked){
+             var b = Number(Ab.innerHTML);
+        		 var d = (b*56/100);
+        		 var g = (b*28/10);
+        		 var e = d.toFixed(2);
+        		 var h = g.toFixed(2);
+        		 Save.innerHTML = e;
+        		 total.innerHTML = h;
+            }else{
+              Save.innerHTML = 0;
+        		 total.innerHTML = 0;
+            }
+          }
+           Btn1.onclick = function(){
+           num = As.innerHTML;
+             num--;
+           if(num<=0){
+            As.innerHTML = 0;
+            total.innerHTML = 0;
+            Save.innerHTML = 0;
+           }else{
+            As.innerHTML = num;
+            total.innerHTML = (num*7/10).toFixed(2);
+            Save.innerHTML = (num*14/100).toFixed(2);
+            
+           } 
+          }
+           
+        Btn2.onclick = function(){
+          var num = As.innerHTML;
+          num++;
+          As.innerHTML = num;
+          total.innerHTML = (num*7/10).toFixed(2);
+          Save.innerHTML = (num*14/100).toFixed(2);
+          }  
+        }
+        S13.onclick = function(){
+          if(S13.checked){
+               S14.checked = true; 
+               
+            if(S11.checked){
+               var a = Number(As.innerHTML);
+            var c = (a*14/100);
+            var f = (a*7/10);
+            
+        		var b = Number(Ab.innerHTML);
+        		var d = (b*56/100);
+        		var g = (b*28/10);
+        		var e = (c+d).toFixed(2);
+        		var h = (f+g).toFixed(2);
+        		
+      		  Save.innerHTML = e;
+        		total.innerHTML = h;
+            }
+            else{
+              var b = Number(Ab.innerHTML);
+	        		 var d = (b*56/100);
+	        		 var g = (b*28/10);
+	        		 var e = d.toFixed(2);
+	        		 var h = g.toFixed(2);
+	        		 Save.innerHTML = e;
+	        		 total.innerHTML = h;
+            }
+          }
+          else{
+            S14.checked = false;
+          }
+          if(!S11.checked){
+            Btn3.onclick = function(){
+            var num = Ab.innerHTML;
+            num--;
+            if(num<=0){
+            Ab.innerHTML = 0;
+            total.innerHTML = 0;
+            Save.innerHTML = 0;
+           }else{
+            Ab.innerHTML = num;
+            total.innerHTML = (num*28/10).toFixed(2);
+            Save.innerHTML = (num*56/100).toFixed(2);
+            } 
+           }
+          Btn4.onclick = function(){
+          var num = Ab.innerHTML;
+          num++;
+          Ab.innerHTML = num;
+          total.innerHTML = (num*28/10).toFixed(2);
+            Save.innerHTML = (num*56/100).toFixed(2);
+           }
+          }else{//s11点击了
+          var aa = Number(total.innerHTML);
+          var bb = Number(Save.innerHTML);
+          Btn3.onclick = function(){
+            var num = Ab.innerHTML;
+            num--;
+            if(num<=0){
+              Ab.innerHTML = 0;
+           }else{
+            Ab.innerHTML = num;
+            var a = Number(As.innerHTML);
+            var c = (a*14/100);
+            var f = (a*7/10);
+        		var b = Number(Ab.innerHTML);
+        		var d = (b*56/100);
+        		var g = (b*28/10);
+        		var e = (c+d).toFixed(2);
+        		var h = (f+g).toFixed(2);
+      		  Save.innerHTML = e;
+        		total.innerHTML = h;
+            } 
+           }
+          Btn4.onclick = function(){
+		          var num = Ab.innerHTML;
+		          num++;
+		          Ab.innerHTML = num;
+		          var a = Number(As.innerHTML);
+            var c = (a*14/100);
+            var f = (a*7/10);
+            
+        		var b = Number(Ab.innerHTML);
+        		var d = (b*56/100);
+        		var g = (b*28/10);
+        		var e = (c+d).toFixed(2);
+        		var h = (f+g).toFixed(2);
+        		
+      		  Save.innerHTML = e;
+        		total.innerHTML = h;
+           }
+          } 
+        }      
+        All.onclick = function(){
+          
+        	if(All.checked){//选中状态
+        		S11.checked = true;
+        		S12.checked = true;
+        		S13.checked = true;
+        		S14.checked = true;
+        		var a = Number(As.innerHTML);
+            var c = (a*14/100);
+            var f = (a*7/10);
+        		var b = Number(Ab.innerHTML);
+        		var d = (b*56/100);
+        		var g = (b*28/10);
+        		var e = (c+d).toFixed(2);
+        		var h = (f+g).toFixed(2);
+      		  Save.innerHTML = e;
+        		total.innerHTML = h;
+        	}
+        	else{//取消状态
+        		S11.checked = false;
+        		S12.checked = false;
+        		S13.checked = false;
+        		S14.checked = false;
+        		Save.innerHTML = 0;
+        		total.innerHTML = 0;
+        	}
+        }
+      </script>
+          <!--代码块-->
         </div>
       </div>
 
