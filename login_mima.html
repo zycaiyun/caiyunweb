@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>修改登录密码</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:#F2F2F2;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background: #28D044;
+        color: white;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .weui-btn.weui-btn_primary{
+         background:#28D044;
+         color: white;
+         width: 88%;
+         margin-top: 60px; 
+      }
+      .content{
+        margin-top: 30px;
+        background: white; 
+      }
+      .content .box{
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #F2F2F2;
+      }
+      .content input{
+        border: none;
+        margin-left: 20px;
+        font-size:14px;
+        height: 40px;
+      }
+      .content .box b{
+        margin-left: 10px;
+        font-weight: normal;
+      }
+      .box button{
+        background:#7ECEF4;
+        color:white;
+        height: 30px;
+        font-size: 12px;
+        border-radius: 8px;
+      }
+      
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui.png" />
+	<b>修改登录密码</b>
+</div>
+<div class="content">
+	<div class="box">
+		<b>新密码&nbsp;&nbsp;&nbsp;</b>
+		<input type="text" placeholder="请输入新密码"/>
+	</div>
+	
+	<div class="box">
+		<b>手机号码</b>
+		<input type="text" placeholder="请输入手机号码"/>
+		<button>获取验证码</button>
+	</div>
+	
+	<div class="box">
+		<b>验证码&nbsp;&nbsp;&nbsp;</b>
+		<input type="text" placeholder="请输入验证码"/>
+	</div>
+</div>
+<a href="#" class="weui-btn weui-btn_primary">确认修改</a>
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_shezhi_ziliao.html";
+  }
+</script>
+
+</html>
