@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>搜索</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+       font-size: 14px;
+      }
+       .weui-search-bar{
+         background:#28D044;
+       }
+       .weui-search-bar b{
+         font-weight: normal;
+         margin-left: 10px;
+       }
+       .weui-search-bar img{
+         width: 14px;
+         padding-right: 14px;
+       }
+       .weui-search-bar .weui-search-bar__form{
+          width: 100px;
+       }
+       .content{
+        /* border: 1px solid;*/
+         margin-left: 40px;
+       }
+       .content .p1{
+         font-size: 16px;
+         color: #C2C2C2;
+       }
+       .content p{
+         height: 40px;
+         border-bottom: 2px solid #F9F9F9;
+         font-size: 14px;
+         line-height: 40px;
+       }
+       .content .last{
+         margin-left: -40px;
+       }
+    </style>
+</head>
+
+<body>
+<!--盒子-->
+<div class="weui-search-bar" id="searchBar"> 
+       <img class="black" src="img/fanhui.png"/>
+	   <form class="weui-search-bar__form">
+	    <div class="weui-search-bar__box">
+	      <i class="weui-icon-search"></i>
+	      <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索(例如：青椒)" required="">
+	      <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+	    </div> 
+	  </form>
+	  <b>取消</b>	  
+</div>
+<div class="content">
+	<p class="p1">搜索历史</p>
+	<p>青椒</p>
+	<p>白菜</p>
+	<p>四季豆</p>	
+    <p class="last" align="center" style="color: #4391FF; font-size: 16px">清除搜索历史</p>
+</div>
+</body>
+<script>
+    var BtnB = document.getElementsByClassName('black')[0];
+    BtnB.onclick = function(){
+      window.location.href="index.html";
+    }
+</script>
+
+</html>

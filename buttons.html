@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>详情</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+    body{
+      background: white;
+    }
+       .weui-search-bar{
+         background:#28D044;
+         height: 50px;
+       }
+       .weui-search-bar b{
+         margin-left: 20px;
+       }
+       .weui-search-bar img{
+         width: 14px;
+         padding-right: 14px;
+       }
+       .daohang ul li{
+          float: left;
+          width: 25%;
+          text-align: center;
+          height: 40px;
+          font-size: 14px;
+          line-height: 40px;
+       }
+       .daohang li.active{
+        color: red;
+       }
+       .qiehuan{
+          width: 86%;
+          position: absolute;
+          top: 90px;
+          display: none;
+          color: red;
+          margin-left: 7%;
+       }
+       .qiehuan.active{
+          display: block;
+       }
+       .qiehuan .left{
+          float: left;
+          width: 44%;
+       }
+       .content{
+         border-bottom: 1px solid #E8E8E8;
+         overflow: hidden;
+         margin-top: 15px;
+       }
+       .left p{
+         font-size: 14px;
+         color: #414242;
+         margin-bottom: 15px;
+       }
+       .right p{
+         font-size: 14px;
+         color: #414242;
+         margin-bottom: 15px;
+       }
+       .qiehuan img{
+          width: 142px;
+          height: 142px;
+       }
+       .gouwu{
+          border-top: 2px solid #F3F3F3;
+       }
+       .gouwu span{
+         display: inline-block;
+         text-align: center;
+         margin-bottom: 10px;
+       }
+       .gouwu b{
+         font-size: 16px;
+         font-weight: normal;
+         margin-right: 5px;
+       }
+       .gouwu .num{
+          border: 1px solid #B8B6B4;
+          margin-left: -4px;
+          margin-right: -4px;
+          width: 35px;
+          color:#000000;
+       }
+       .gouwu .dec{
+         border-top: 1px solid #B8B6B4;
+         border-left: 1px solid #B8B6B4;
+         border-bottom: 1px solid #B8B6B4;
+         width: 20px;
+         cursor: pointer;
+       }
+       .gouwu .add{
+         border-top: 1px solid #B8B6B4;
+         border-bottom: 1px solid #B8B6B4;
+         border-right: 1px solid #B8B6B4;
+         width: 20px;
+         cursor: pointer;
+       }
+       .qiehuan .right{
+          float: left;
+          width: 44%;
+          margin-left: 10%;
+       }
+      
+    </style>
+</head>
+
+<body>
+<!--盒子-->
+<div class="weui-search-bar" id="searchBar"> 
+       <img class="black" src="img/fanhui.png"/>
+	   <form class="weui-search-bar__form">
+	    <div class="weui-search-bar__box">
+	      <i class="weui-icon-search"></i>
+	      <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索(例如：青椒)" required="">
+	      <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+	    </div> 
+	  </form>
+	  <b></b>
+</div>
+<div class="daohang">
+	<ul>
+	   <li class="li active">综合</li>
+	   <li class="li">销量</li>
+	   <li class="li">新品</li>
+	   <li class="li">价格</li>  
+	</ul>	
+</div>
+<div class="qiehuan active">
+    <div class="content">
+		<div class="left">
+			<img src="img/蒜苗.jpg" />
+			<p>红蒜苗</p>
+			<div class="gouwu">
+				<b>0.70/两</b><del style="color: #A8A7A5;">0.84/两</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+		<div class="right">
+			<img src="img/2.jpg" />
+			<p>白蒜苗</p>
+			<div class="gouwu">
+				<b>0.50/两</b><del style="color: #A8A7A5;">0.60/两</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+    </div>
+    <div class="content">
+		<div class="left">
+			<img src="img/3.jpg" />
+			<p>红小米辣</p>
+			<div class="gouwu">
+				<b>0.60/两</b><del style="color: #A8A7A5;">0.72/两</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+		<div class="right">
+			<img src="img/4.jpg" />
+			<p>白瓜</p>
+			<div class="gouwu">
+				<b>3.38/斤</b><del style="color: #A8A7A5;">4.05/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+    </div>
+    <div class="content">
+		<div class="left">
+			<img src="img/5.jpg" />
+			<p>金针菇</p>
+			<div class="gouwu">
+				<b>4.50/包</b><del style="color: #A8A7A5;">0.84/两</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+		<div class="right">
+			<img src="img/6.jpg" />
+			<p>白蒜苗</p>
+			<div class="gouwu">
+				<b>6.68/斤</b><del style="color: #A8A7A5;">8.01/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+    </div>
+    <div class="content">
+		<div class="left">
+			<img src="img/7.jpg" />
+			<p>线茄</p>
+			<div class="gouwu">
+				<b>4.30/斤</b><del style="color: #A8A7A5;">5.51/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+		<div class="right">
+			<img src="img/8.jpg" />
+			<p>鲜木耳</p>
+			<div class="gouwu">
+				<b>5.50/斤</b><del style="color: #A8A7A5;">6.60/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+    </div>
+    <div class="content">
+		<div class="left">
+			<img src="img/7.jpg" />
+			<p>新大土豆</p>
+			<div class="gouwu">
+				<b>0.80/斤</b><del style="color: #A8A7A5;">1.05/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+		<div class="right">
+			<img src="img/10.jpg" />
+			<p>山药</p>
+			<div class="gouwu">
+				<b>6.80/斤</b><del style="color: #A8A7A5;">8.16/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+    </div>
+    <div class="content">
+		<div class="left">
+			<img src="img/10.jpg" />
+			<p>小茶树菇</p>
+			<div class="gouwu">
+				<b>9.90/斤</b><del style="color: #A8A7A5;">11.88/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+		<div class="right">
+			<img src="img/11.jpg" />
+			<p>紫薯</p>
+			<div class="gouwu">
+				<b>5.50/斤</b><del style="color: #A8A7A5;">6.60/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+    </div>
+    <div class="content">
+		<div class="left">
+			<img src="img/12.jpg" />
+			<p>丝瓜</p>
+			<div class="gouwu">
+				<b>4.50/斤</b><del style="color: #A8A7A5;">5.39/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+		<div class="right">
+			<img src="img/13.jpg" />
+			<p>苦瓜</p>
+			<div class="gouwu">
+				<b>5.30/斤</b><del style="color: #A8A7A5;">6.35/斤</del><br />
+				<span class="dec">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>	
+		</div>
+    </div>
+    <div class="weui-loadmore">
+  <i class="weui-loading"></i>
+  <span style="color:#000000;" class="weui-loadmore__tips">数据加载中</span>
+</div>
+
+</div>
+
+<div class="qiehuan">
+	<!--销量内容-->
+</div>
+<div class="qiehuan">
+	<!--新品内容-->
+</div>
+<div class="qiehuan">
+	<!--价格内容-->
+</div>
+
+
+
+</body>
+<script>
+    var BtnB = document.getElementsByClassName('black')[0];
+    BtnB.onclick = function(){
+      window.location.href="index.html";
+    }   
+//  循环导航栏
+    var aLi = document.getElementsByClassName('li');
+    var aDiv = document.getElementsByClassName('qiehuan');
+    for (var i = 0; i < aLi.length; i++) {
+			aLi[i].index = i;
+			//远点设置监听
+			aLi[i].onclick = function(){
+				//点击之前先清空
+				for (var j = 0; j < aLi.length; j++) {
+					aLi[j].className = 'li';
+					aDiv[j].className = 'qiehuan';
+				}
+				this.className = 'li active';
+				aDiv[this.index].className = 'qiehuan active';
+			}
+		}
+    
+    //数量加减
+    var Bdec = document.getElementsByClassName('dec');
+    var Badd = document.getElementsByClassName('add');
+    var Num  = document.getElementsByClassName('num');
+    
+    for(var i=0;i<Bdec.length;i++){
+       	Bdec[i].index = i; 
+       Bdec[i].onclick = function(){
+          var num = Num[this.index].innerText;	
+          if(num>0){
+            num--;
+            Num[this.index].innerText = num;
+          }else{
+            Num[this.index].innerText = 0;
+          }
+          
+          
+       }
+    }
+    for(var i=0;i<Badd.length;i++){
+       	Badd[i].index = i; 
+        Badd[i].onclick = function(){
+          var num = Num[this.index].innerText;	
+          num++;
+          Num[this.index].innerText = num;
+       }
+    }
+    
+</script>
+
+</html>
