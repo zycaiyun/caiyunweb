@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>收货地址管理</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:#F2F2F2;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background: #28D044;
+        color: white;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-size: 16px;
+        font-weight: normal;
+        line-height:50px;
+        margin-left: 50px;
+      }
+      .nav span{
+        font-size: 14px;
+        position: absolute;
+        right: 30px;
+        top: 14px;
+      }
+      .weui-cell img{
+        width: 50px;
+      }
+      .content{
+         margin: 10px auto;
+         background: white;
+         width: 90%;
+         font-size: 14px;
+      }
+      .content span{
+         color: red;
+         font-size: 12px;
+      }
+      .content del{
+         font-size: 12px;
+      }
+      .content p{
+         margin-left: 10px;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui.png" />
+	<b>收藏商品</b>
+	<span>编辑</span>
+</div>
+<div class="content">
+  <div class="weui-cell">
+    <div class="weui-cell__hd">
+      <img src="img/1.jpg">
+    </div>
+    <div class="weui-cell__bd">
+      <p>红蒜苗</p>
+    </div>
+    <div class="weui-cell__ft">
+        <span>&yen;0.70</span><br/>
+        <del>0.84</del>
+    </div>
+    <a class="weui-cell weui-cell_access" href="javascript:;">
+	    <div class="weui-cell__ft">
+		</div>
+    </a>
+  </div>
+</div> 
+<div class="content">
+  <div class="weui-cell">
+    <div class="weui-cell__hd">
+      <img src="img/baicai.jpg">
+    </div>
+    <div class="weui-cell__bd">
+      <p>火锅白菜</p>
+    </div>
+    <div class="weui-cell__ft">
+       <span>&yen;2.80</span><br/>
+       <del>3.36</del>
+    </div>
+    <a class="weui-cell weui-cell_access" href="javascript:;">
+	    <div class="weui-cell__ft">
+		</div>
+    </a>
+  </div>
+</div>
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_index.html";
+  }
+</script>
+
+</html>

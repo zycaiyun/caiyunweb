@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>签到</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:#F2F2F2;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background: #71D9FF;
+        color: white;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav p{
+        font-size: 16px;
+        font-weight: normal;
+        line-height:50px;
+        text-align: center;
+      }
+      .nav span{
+        font-size: 14px;
+        position: absolute;
+        right: 30px;
+        top: 14px;
+      }
+      .img img{
+        width: 100%;
+        margin-top: 2px;
+      }
+      .content input{
+       display: block;
+       margin: 0 auto;
+       text-align: center;  
+      }
+      .box{
+        margin-top: 130px; 
+      }
+      .box button{
+        width: 70%;
+        display: block;
+        margin-left: 15%;
+        background: #28D144;
+        border-radius: 15px;
+        height: 30px;
+        color: white;
+        font-size: 14px;
+      }
+      .box p{
+        font-size: 12px;
+        color: #A1A1A1;
+      }
+    </style>
+</head>
+<script src="lib/jquery-2.1.4.js"></script>
+<!--<script src="lib/fastclick.js"></script>-->
+<script src="js/jquery-weui.js"></script>
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui.png" />
+	<p>签到</p>
+	<span>签到历史</span>
+</div>
+<div class="img">
+	<img src="img/beijing.png"/>
+</div>
+<div class="content">
+	<!--html代码中写一个用到当做触发元素的input -->
+	<p align="center">请选择日期：</p>
+   <input type="text"  data-toggle='date' id="my-input"/>
+</div>
+<div class="box">
+   <p align="center">你已经连续签到*天</p>
+   <button>已签到 去分享</button>
+</div>
+   <!--js代码初始化改input -->
+<script>
+//  $("body").calendar();
+    $('#my-input').calendar();
+//toolbarTemplate: 
+//  '<div class="toolbar">' +
+//      '<div>' +
+//        '<a href="javascript:;" class="weui-btn weui-btn_primary noTime">时间不限</a>'+
+//      '</div>'+
+//      '<div class="toolbar-inner">' +
+//          '{{yearPicker}}' +
+//          '{{monthPicker}}' +
+//      '</div>' +
+//    '</div>'
+//
+// $("body").on("click",function(e){
+//    if($(e.target).hasClass("noTime")){
+//        //单击时赋值并且关闭时间插件
+//        $("#shijian").val("时间不限").calendar("close");
+//    }
+//})
+   </script>
+   
+	
+
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_index.html";
+  }
+</script>
+
+</html>

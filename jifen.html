@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>积分</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <!--<link rel="stylesheet" href="./css/demos.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">-->
+    <style>
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        border-bottom: 1px solid #919191;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .content .jifen{
+         display: block;
+         margin: 15px auto 5px;
+      }
+      .content p{
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .content h3{
+        font-weight: normal;
+        width: 70%;
+        border: 1px solid;
+        margin:15px auto 10px;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        height: 40px;
+        line-height: 40px;
+        background: #B3D366;
+        border-radius: 20px;
+      }
+      .content h4{
+        font-weight: normal;
+        text-align: center;
+      } 
+      .content .more{
+         display: block;
+         width: 20px;
+         margin: 5px auto 0;
+      }
+      .box{
+        width: 90%;
+        margin:5px auto;
+        font-size: 14px;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui (1).png" />
+	<b>积分中心</b>
+</div>
+<div class="content">
+	<img class="jifen" src="img/jifen.png"/>
+	<p align="center">现有积分：
+	   <span style="color: red;">666</span>
+	</p>
+	<h3>立即购物赚积分</h3>
+	<h4>积分攻略</h4>
+	<img class="more" src="img/xiala2-01.png" />
+</div>
+<div class="box">
+	<p>积分奖励计划</p>
+	<p>1.签到送积分：</p>
+	<p>每天登录商城签到送*积分，连续登录*天送*个积分。</p>
+	<p>2.购物积分：</p>
+	<p>通过商城购物，成功购物一元获得*个积分（不包含运费），购物商品价格越多积分越多</p>
+	
+</div>
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_index.html";
+  }
+</script>
+
+</html>

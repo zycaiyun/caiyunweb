@@ -153,9 +153,9 @@
           </div>
           <div class="shoucang">
             <div class="fl">
-            	  <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-shoucang"></use>
-          </svg>
+            	<svg class="icon" id="shoucang" aria-hidden="true">
+                    <use xlink:href="#icon-shoucang"></use>
+             </svg>
           <p>收藏</p>
             </div>
             <div class="fr">
@@ -169,8 +169,8 @@
            <div class="balance">
                  <h2 align="center">115.20</h2>
                  <p>账户余额（元）</p>
-                 <img src="images/tixian.jpg"/>
-                 <img src="images/chongzhi.jpg"/>
+                 <a href="tixian.html"><img src="images/tixian.jpg"/></a>
+                 <a href="chongzhi.html"><img src="images/chongzhi.jpg"/></a>
            </div>
           <div class="weui-cells">
   <div class="weui-cell">
@@ -179,7 +179,7 @@
       <p>我的订单</p>
     </div>
     <div style="font-size: 12px;" class="weui-cell__ft">查看全部订单</div>
-    <a class="weui-cell weui-cell_access" href="javascript:;">
+    <a class="weui-cell weui-cell_access" href="alldingdan.html">
 				    <div class="weui-cell__ft">
 				    </div>
 				  </a>
@@ -249,7 +249,7 @@
 				    <div class="weui-cell__bd">
 				      <p>积分</p>
 				    </div>
-				    <a class="weui-cell weui-cell_access" href="javascript:;">
+				    <a class="weui-cell weui-cell_access" href="jifen.html">
 				    <div class="weui-cell__ft">
 				    </div>
 				  </a>
@@ -281,7 +281,7 @@
 				    <div class="weui-cell__bd">
 				      <p>实名认证</p>
 				    </div>
-				    <a class="weui-cell weui-cell_access" href="javascript:;">
+				    <a class="weui-cell weui-cell_access" href="renzheng.html">
 				    <div class="weui-cell__ft">
 				    </div>
 				  </a>
@@ -384,6 +384,17 @@
         title: "选择职业",
         items: ["法官", "医生", "猎人", "学生", "记者", "其他"]
       });
+    </script>
+    <script>
+      var SC = document.getElementsByClassName('shoucang')[0];
+      SC.onclick = function(){
+         window.location.href="shoucang.html";
+      }
+      
+      var QD = document.getElementsByClassName('qiandao')[0];
+      QD.onclick = function(){
+         window.location.href="qiandao.html";
+      }
     </script>
   </body>
 </html>

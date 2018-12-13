@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>提现</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:#F2F2F2;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background: #28D044;
+        color: white;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .weui-btn.weui-btn_primary{
+         background:#EB6100;
+         color: white;
+         width: 88%;
+         margin-top: 60px; 
+      }
+      .weui-cell img{
+         width: 30px;
+      }
+      .weui-cell.active p{
+        color:#969696;
+        margin-left: 30px;
+      }
+      .weui-cell.active{
+        margin-bottom: 5px;
+        background: white;
+      }
+      .weui-cell.aa{
+        margin-bottom: 5px;
+        background: white;
+      }
+      .weui-cell.aa input{
+         border: none;
+         height: 30px;
+         font-size: 14px;
+         width: 55%; 
+      }
+      .weui-cell{
+         background: white;
+         margin-bottom: 2px;
+      }
+      
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui.png" />
+	<b>提现</b>
+</div>
+
+  <div class="weui-cell active">
+    <div class="weui-cell__hd">
+       <img src="img/shuaqiaqiapianyinhangqia.png">
+    </div>
+    <div class="weui-cell__bd">
+      <p>点击添加银行卡</p>
+    </div>
+    <!--<div class="weui-cell__ft">说明文字</div>-->
+    <a class="weui-cell weui-cell_access" href="javascript:;">
+		<div class="weui-cell__ft">
+		</div>
+	</a>
+  </div>
+  
+  <div class="weui-cell aa">
+    <!--<div class="weui-cell__hd"><img src=""></div>-->
+    <div class="weui-cell__bd">
+      <p>提现金额</p>
+    </div>
+    <div class="weui-cell__ft">
+        <input type="text" placeholder="输入提现金额"></input>
+        <span style="color: #000000;">元</span>
+    </div>
+  </div>
+  
+  <div class="weui-cell">
+    <div class="weui-cell__bd">
+      <p>可用余额</p>
+    </div>
+    <div class="weui-cell__ft">
+      <span style="color: red;">115.20</span>
+      <span style="color: #000000;">元</span>
+    </div>
+  </div>
+  <div class="weui-cell">
+    <div class="weui-cell__bd">
+      <p>可用余额</p>
+    </div>
+    <div class="weui-cell__ft">
+      <span style="color: #000000;">0</span>
+      <span style="color: #000000;">元</span>
+    </div>
+  </div>
+<a href="#" class="weui-btn weui-btn_primary">提现</a>
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_index.html";
+  }
+</script>
+
+</html>

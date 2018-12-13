@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>我的订单</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <!--<link rel="stylesheet" href="./css/demos.css">-->
+    <link rel="stylesheet" href="css/reset.css" />
+   <!-- <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">-->
+    <style>
+      body{
+        background:#F2F2F2;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background: #28D044;
+        color: white;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .weui-search-bar{
+         background:#F2F2F2;
+         height: 50px;
+       }
+       .weui-search-bar b{
+         font-weight: normal;
+         margin-left: 10px;
+       }
+       .weui-search-bar .weui-search-bar__form{
+          width: 100px;
+       }
+       .switch li{
+         float: left;
+         width: 20%;
+         text-align: center;
+         font-size: 14px;
+         height: 40px;
+         background: white;
+         line-height: 40px;
+       }
+       li.active{
+         border-bottom: 3px solid red;
+       }
+       .content img{
+          width: 100px;
+          display: block;
+          margin: 150px auto 0;
+       }
+       .content h2{
+         font-weight: normal;
+         margin-top: 10px;
+         font-size:16px;
+       }
+       .content p{
+         color:#929292;
+         font-size: 12px;
+         margin-top: 5px;
+       }
+       .content h3{
+         font-size: 16px;
+         font-weight: normal;
+         height: 30px;
+         line-height: 30px;
+         border: 1px solid;
+         width: 30%;
+         margin: 10px auto;
+         text-align: center;
+         border: 1px solid #929292;
+         border-radius: 20px;
+       }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui.png" />
+	<b>我的订单</b>
+</div>
+<div class="weui-search-bar" id="searchBar"> 
+	   <form class="weui-search-bar__form">
+	    <div class="weui-search-bar__box">
+	      <i class="weui-icon-search"></i>
+	      <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="请输入搜索关键字" required="">
+	      <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+	    </div> 
+	  </form>
+</div>
+<div class="switch">
+	<ul>
+	    <li class="active">全部</li>
+	    <li>待付款</li>
+	    <li>待发货</li>
+	    <li>待收货</li>
+	    <li>待评价</li> 
+	</ul>
+</div>
+<div class="content">
+	<img src="img/dingdan (1).png"/>
+	<h2 align="center">暂无订单</h2>
+	<p align="center">"快打开商城下一单吧"</p>
+	<h3>刷新</h3>
+</div>
+
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_index.html";
+  }
+  var aLi = document.getElementsByTagName('li');
+  for(var i=0;i<aLi.length;i++){
+     aLi[i].onclick = function(){
+        for(var j=0;j<aLi.length;j++){
+          aLi[j].className = '';
+        }
+        this.className = 'active';
+     }
+  }
+</script>
+
+</html>

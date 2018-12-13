@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>关于</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:#F2F2F2;
+        font-size: 14px;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background: #28D044;
+        color: white;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .cont img{
+         width: 80px; 
+         display: block;
+         margin: 10px auto;
+      }
+      .cont{
+        margin-bottom: 50px;
+      }
+      .weui-cell{
+        background: white;
+        margin-bottom: 3px;
+      }
+      .content{
+        margin-top: 40px;
+        font-size: 12px;
+        color:peru;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui.png" />
+	<b>关于</b>
+</div>
+<div class="cont">
+  <img src="images/logo.png"/>
+  <p align="center">菜云</p>
+  <p align="center">For Android V5.0</p>
+</div>
+	<div class="weui-cell">
+      <div class="weui-cell__hd"></div>
+      <div class="weui-cell__bd">
+        <p>检查更新</p>
+      </div>
+      <div style="font-size: 14px;" class="weui-cell__ft">
+      </div>
+      <a class="weui-cell weui-cell_access" href="#">
+		<div class="weui-cell__ft" id="gengxin">
+		</div>
+	  </a>
+    </div>
+	<div class="weui-cell">
+      <div class="weui-cell__hd"></div>
+      <div class="weui-cell__bd">
+        <p>关于菜云</p>
+      </div>
+      <div style="font-size: 14px;" class="weui-cell__ft">
+      </div>
+      <a class="weui-cell weui-cell_access" href="#">
+		<div class="weui-cell__ft">
+		</div>
+	  </a>
+    </div>
+    <div class="content">
+    	<p align="center">Copyright &copy;2005-2018</p>
+    	<p align="center">遵义菜云 版权所有</p>
+    </div>
+</body>
+<script src="lib/jquery-2.1.4.js"></script>
+<!--<script src="lib/fastclick.js"></script>-->
+<script src="js/jquery-weui.js"></script>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_shezhi.html";
+  }
+   $(document).on("click", "#gengxin", function() {
+        $.alert("暂无新版本更新！")
+      });
+</script>
+
+</html>

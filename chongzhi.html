@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>充值</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:#F2F2F2;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background: #28D044;
+        color: white;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .weui-btn.weui-btn_primary{
+         background:#EB6100;
+         color: white;
+         width: 88%;
+         margin-top: 60px; 
+      }
+      .weui-cell img{
+         width: 30px;
+         padding: 5px;
+      }
+      .weui-cell p{
+        color:#969696;
+        margin-left: 30px;
+      }
+      .weui-cell{
+        margin-bottom: 2px;
+        background: white;
+      }
+      .weui-cell.aa{
+        margin-bottom: 10px;
+        background: white;
+      }
+      .weui-cell.aa p{
+         color: #000000;
+         margin-left: 10px;
+      }
+      .weui-cell.aa input{
+         border: none;
+         width: 70%;
+         height: 40px;
+         font-size: 14px;
+      }
+      .weui-cell__hd{
+        width: 40px;
+        height: 40px;
+        background: #009944;
+        border-radius: 50%;
+      }
+      .weui-cell.active .weui-cell__hd{
+        background:#00B7EE;
+      }
+      .weui-cell__bd{
+        margin-left: 0;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui.png" />
+	<b>充值</b>
+</div>
+<div class="weui-cell aa">
+    <div class="weui-cell__bd">
+      <p>充值金额</p>
+    </div>
+    <div class="weui-cell__ft">
+        <input type="text" placeholder="输入充值金额"></input>
+    </div>
+     <a class="weui-cell weui-cell_access" href="javascript:;">
+		<div class="weui-cell__ft">
+		</div>
+	</a>
+</div>
+
+  <div class="weui-cell">
+    <div class="weui-cell__hd">
+       <img src="img/weixin.png">
+    </div>
+    <div class="weui-cell__bd">
+      <p style="color: #000000;">微信支付</p>
+      <p style="font-size: 14px;">快捷支付</p>
+    </div>
+    <a class="weui-cell weui-cell_access" href="javascript:;">
+		<input type="checkbox"/>
+	</a>
+  </div>
+  
+  <div class="weui-cell active">
+    <div class="weui-cell__hd">
+       <img src="img/zhifubao.png">
+    </div>
+    <div class="weui-cell__bd">
+      <p style="color: #000000;">支付宝支付</p>
+      <p style="font-size: 14px;">快捷支付</p>
+    </div>
+    <a class="weui-cell weui-cell_access" href="javascript:;">
+		<input type="checkbox"/>
+	</a>
+  </div>
+  
+<a href="#" class="weui-btn weui-btn_primary">充值</a>
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_index.html";
+  }
+</script>
+
+</html>

@@ -65,7 +65,7 @@
     <div class="weui-cell__bd">
       <p>收货地址</p>
     </div>
-    <a class="weui-cell weui-cell_access" href="javascript:;">
+    <a class="weui-cell weui-cell_access" href="shouhuodizhi.html">
 		<div class="weui-cell__ft">
 	    </div>
 	</a>
@@ -85,9 +85,9 @@
     <div class="weui-cell__bd">
       <p>清除本地缓存</p>
     </div>
-    <div style="font-size: 12px;" class="weui-cell__ft">3.20M</div>
+    <div style="font-size: 12px;" class="weui-cell__ft" id="num">3.20M</div>
     <a class="weui-cell weui-cell_access" href="javascript:;">
-		<div class="weui-cell__ft">
+		<div class="weui-cell__ft" id="huancun">
 		</div>
 	</a>
   </div>
@@ -103,7 +103,7 @@
     <div class="weui-cell__bd">
       <p>关于</p>
     </div>
-    <a class="weui-cell weui-cell_access" href="javascript:;">
+    <a class="weui-cell weui-cell_access" href="guanyu.html">
 		<div class="weui-cell__ft">
 	    </div>
 	</a>
@@ -112,11 +112,23 @@
 
 
 </body>
+<script src="lib/jquery-2.1.4.js"></script>
+<script src="lib/fastclick.js"></script>
+<script src="js/jquery-weui.js"></script>
+
 <script>
   var BtnB = document.getElementsByClassName('black')[0];
   BtnB.onclick = function(){
     window.location.href="user_index.html";
   }
+        $(document).on("click", "#huancun", function() {
+        $.confirm("确定清除本地缓存?", "确认删除?", function() {
+          $.toast("本地缓存已清除!");
+          $('#num').html('');
+        }, function() {
+          //取消操作
+        });
+      });
 </script>
 
 </html>

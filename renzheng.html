@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>实名认证</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!--<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">-->
+    <style>
+       body{
+         background: white;
+       }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background: #28D144;
+        color: white;
+        border-bottom: 1px solid #919191;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .daohang{
+        height: 60px;
+      }
+      .daohang li{
+        float: left;
+        font-size: 18px;
+        width: 40%;
+        font-weight: bold;
+        margin-left: 10%;
+        line-height: 60px;
+        color:#9F9F9F;
+      }
+      .content{
+        font-size: 14px;
+        width: 90%;
+        margin-left: 5%;
+        color: #848484;
+      }
+      .content .box{
+        width: 80%;
+        border: 3px solid #C0C0C0;
+        margin-left: 10%;
+        margin-bottom: 5px;
+        height: 100px;
+        border-radius: 15px;
+      }
+      .box img{
+        display: block;
+        margin: 10px auto 0;
+      }
+      .box p{
+        font-size: 16px;
+        color:#595959;
+      }
+      .content input{
+        border: none;
+        display: block;
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #C0C0C0;
+        font-size: 14px;
+        margin: 5px 0 20px;
+      }
+      .content .tijiao{
+         display: block;
+         width: 80%;
+         margin: 0 auto;
+         height: 40px;
+         background: #BFBFBF;
+         color: white;
+         font-size: 14px;
+         border-radius: 20px;
+      }
+      .content .quxiao{
+         display: block;
+         width: 80%;
+         height: 40px;
+         background: white;
+         border: 1px solid gainsboro;
+         color:grey;
+         margin: 0 auto;
+         font-size: 14px;
+         border-radius: 20px;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui.png" />
+	<b>实名认证</b>
+</div>
+<div class="daohang">
+	<ul>
+	   <li class="aa">实名认证</li>
+	   <li class="ab">商家认证</li>  
+	</ul>
+</div> 
+<div class="content">
+	<p>为有效保障您的资金安全，提升订单处理效率，请填写与您身份证一致的信息，否则不会通过审核。</p>
+	<div class="box">
+		<img src="img/ai-camera.png" width="50px"/>
+		<p align="center">营业执照</p>
+	</div>
+	<p style="color: #000000;">真实姓名</p>
+	<input type="text" placeholder="请填写您本人的真实姓名" />
+	<p style="color: #000000;">身份证号</p>
+	<input type="text" placeholder="请填写您本人的身份证号" />
+	<button class="tijiao">提交认证</button><br>
+	<button class="quxiao">取消</button>
+</div>
+
+
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_index.html";
+  }
+//var aLi = document.getElementsByClassName('aa');
+//for(var i=0;i<aLi.length;i++){
+//   aLi[i].onclick = function(){
+//      for(var j=0;j<aLi.length;j++){
+//          aLi[j].className = 'aa';
+//      }
+//      this.className = 'aa active';
+//   }
+//}
+  var Btna = document.getElementsByClassName('aa')[0];
+  var Btnb = document.getElementsByClassName('ab')[0];
+  Btna.onclick = function(){
+     Btna.style.color = '#000000';
+     BtnB.style.color = '#9F9F9F';
+  }
+  Btnb.onclick = function(){
+     Btna.style.color = '#9F9F9F';
+     Btnb.style.color = '#000000';
+  }
+  
+</script>
+
+</html>

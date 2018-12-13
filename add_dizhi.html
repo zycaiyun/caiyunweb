@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>新建收货地址</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .weui-cells{
+        margin: 0;
+      }
+      .weui-btn.weui-btn_primary{
+         background:red;
+         color: white;
+         width: 82%;
+         height: 40px;
+         line-height: 40px;
+         border-radius: 20px;
+         position: fixed;
+         left: 9%;
+         bottom: 60px;
+      }
+      .weui-cell{
+        border-bottom: 1px solid #F6F6F6;
+        font-size: 14px;
+      }
+      .weui-cell.active{
+        height: 60px;
+        padding-top:0;
+      }
+      .weui-cell .weui-label{
+        width: 80px;
+      }
+      .weui-cell.width{
+        width: 250px;
+      }
+      .weui-cells.weui-cells_form{
+        position: relative;
+      }
+      .lianxi{
+        width: 25%;
+        height:30%;
+        border-left: 2px solid #F6F6F6;
+        border-bottom: 2px solid #F6F6F6;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 12px;
+      }
+      .lianxi img{
+        width: 40px;
+        display: block;
+        margin: 5px auto;
+        text-align: center;
+      }
+      .weui-cell.active button{
+        width: 50px;
+        margin-right: 17px;
+        margin-top: 10px;
+        background: white;
+        color: #000000;
+        border: 1px solid #B4B4B4;
+        border-radius: 10px;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui (1).png" />
+	<b>新建收货地址</b>
+</div>
+ <div class="weui-cells weui-cells_form">
+ 
+  <div class="weui-cell width">
+    <div class="weui-cell__hd"><label class="weui-label">收货人</label></div>
+    <div class="weui-cell__bd">
+      <input class="weui-input" type="text" placeholder="">
+    </div>
+  </div>
+  <div class="lianxi">
+  	 <img src="img/lianxirenguanli.png" />
+  	 <p align="center">选取联系人</p>
+  </div>
+  <div class="weui-cell width">
+    <div class="weui-cell__hd"><label class="weui-label">手机号码</label></div>
+    <div class="weui-cell__bd">
+      <input class="weui-input" type="tel" placeholder="">
+    </div>
+  </div>
+  
+  <div class="weui-cell">
+    <div class="weui-cell__hd"><label class="weui-label">所在地区</label></div>
+    <div class="weui-cell__bd">
+      <input class="weui-input" type="text" placeholder="">
+    </div>
+  </div>
+  <div class="weui-cell active">
+    <div class="weui-cell__hd"><label class="weui-label">详细地址</label></div>
+    <div class="weui-cell__bd">
+      <input class="weui-input" type="text" placeholder="街道，楼牌号等">
+    </div>
+  </div>
+  <div class="weui-cell active">
+    <div class="weui-cell__hd"><label class="weui-label">标签</label></div>
+    <div class="weui-cell__bd">
+       <button>家</button>
+       <button>公司</button>
+       <button>学校</button><br/>
+       <button>+</button>
+       
+       
+    </div>
+  </div>
+  
+</div>
+<a href="#" class="weui-btn weui-btn_primary">保存</a>
+
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="shouhuodizhi.html";
+  }
+</script>
+
+</html>
