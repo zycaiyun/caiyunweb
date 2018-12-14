@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>分销中心</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:white;
+        font-size: 14px;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background: white;
+        color:#000000;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .content{
+        background:#28D144;
+        color: white;
+        font-size: 12px;
+        position: relative;
+      }
+      .content .pos{
+        width: 60px;
+        height:60px;
+        background: white;
+        position: absolute;
+        top: 20px;
+        left: 5%;
+        border-radius: 50%;
+      }
+      .top{
+        margin-left: 25%;
+        padding-top: 20px;
+      }
+      .top p{
+        margin-top: 5px;
+      }
+      .center img{
+        width: 50%;
+        display: block;
+        margin: 10px auto 0;
+      }
+      .center p{
+        font-size: 14px;
+      }
+      .bottom{
+        border-top:1px solid white;
+        overflow: hidden;
+        margin-top: 20px;
+        height: 30px;
+      }
+      .bottom img{
+        width: 13px;
+        display: block;
+        float: left;
+        margin: 8px 8px 0 30px;
+      }
+      .bottom .fl{
+        width:50%;
+        float: left;
+        overflow: hidden;
+      }
+      .bottom .fr{
+        width: 49%;
+        float: left;
+        border-left: 1px solid white;
+      }
+      .bottom p{
+        float: left;
+        line-height: 30px; 
+      }
+      .weui-cell img{
+        width: 20px;
+      }
+      .weui-cell.active{
+        border-bottom:2px solid #F6F6F6;
+      }
+      .box{
+        margin-top: 20px;
+      }
+      .box span{
+        color:#D3D3D3;
+        font-weight: bold;
+      }
+      .box img{
+        width: 50px;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui (1).png"/>
+	<b>分销中心</b>
+</div>
+<div class="content">
+	<div class="top">
+	   	 <p>ID昵称</p>
+	     <p>你是由***推荐</p>
+	     <p>APP注册推荐码：*****</p>
+	</div>
+	<div class="pos">
+		
+	</div>
+	<div class="center">
+		<img src="img/221859992776137272.png"/>
+		<p align="center">快把菜云分享给朋友吧！</p>
+	</div>
+	<div class="bottom">
+		<div class="fl">
+			<img src="img/order.png" />
+			<p>分销订单：0</p>
+		</div>
+		<div class="fr">
+			<img src="img/shouyi1.png"/>
+			<p>分销收益：0</p>
+		</div>
+	</div>
+</div>
+<div class="weui-cell active">
+	<div class="weui-cell__hd">
+		<img src="img/dingdan.png"/>
+	</div>
+	<div class="weui-cell__bd">
+		<p>分销订单</p>
+	</div>
+	<a class="weui-cell weui-cell_access" href="fenxiao_dingdan.html">
+		<div class="weui-cell__ft">
+		</div>
+	</a>
+</div>
+<div class="weui-cell active">
+	<div class="weui-cell__hd">
+		<img src="img/_dayinxiaopiao.png"/>
+	</div>
+	<div class="weui-cell__bd">
+		<p>分销账单</p>
+	</div>
+	<a class="weui-cell weui-cell_access" href="fenxiao_zhangdan.html">
+		<div class="weui-cell__ft">
+		</div>
+	</a>
+</div>
+<div class="weui-cell active">
+	<div class="weui-cell__hd">
+		<img src="img/tubiao-.png"/>
+	</div>
+	<div class="weui-cell__bd">
+		<p>会员列表</p>
+	</div>
+	<a class="weui-cell weui-cell_access" href="fenxiao_huiyuan.html">
+		<div class="weui-cell__ft">
+		</div>
+	</a>
+</div>
+<div class="box">
+	<p align="center">
+	  <span>——————</span>&nbsp;&nbsp;邀请码分享到 &nbsp;<span>——————</span>
+	</p>
+	<img src="images/weixin.png"/>
+</div>
+</body>
+<script src="lib/jquery-2.1.4.js"></script>
+<script src="js/jquery-weui.js"></script>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="user_index.html";
+  }
+</script>
+
+</html>

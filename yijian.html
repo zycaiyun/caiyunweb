@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>意见反馈</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:#F2F2F2;
+        font-size: 14px;
+      }
+      .nav{
+        height: 50px;
+        position: relative;
+        background: #28D044;
+        color: white;
+      }
+      .nav p{
+         text-align: center;
+         line-height: 50px;
+         font-size: 16px;
+      }
+      .nav b{
+        position: absolute;
+        font-weight: normal;
+        top: 14px;
+        left: 20px;
+      }
+      .nav span{
+        position: absolute;
+        top: 14px;
+        right: 20px;
+      }
+  
+      .weui-btn.weui-btn_primary{
+         background:#D2D2D2;
+         border-radius:20px;
+         color: white;
+         width: 86%;
+         margin-top: 60px; 
+      }
+     .weui-cells.weui-cells_form{
+        margin-top: 0;
+        font-size: 12px;
+     }
+     .cont{
+       height: 100px;
+       margin-top: 1px;
+       background: white;
+       overflow: hidden;
+     }
+     .cont img{
+        width: 20px;
+        padding: 15px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border:1px solid #F2F2F2;
+        float: left;
+     }
+     .cont p{
+       float: left;
+       margin-left: 20px;
+       line-height: 90px;
+       color:#A3A3A3;
+     }
+     .weui-cells{
+       font-size: 12px;
+     }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <b class="quxiao">取消</b>
+	<p>意见反馈</p>
+	<span>发表</span>
+</div>
+<div class="weui-cells weui-cells_form">
+  <div class="weui-cell">
+    <div class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="你有什么意见或建议，快来告诉我吧！" rows="5"></textarea>
+    </div>
+  </div>
+</div>
+<div class="cont">
+    <img src="img/ai-camera.png"/>
+    <p>添加图片说明</p>
+</div>
+<div class="weui-cells">
+  <div class="weui-cell">
+    <div class="weui-cell__bd">
+      <input class="weui-input" type="text" placeholder="手机号 / 邮箱 / QQ号 (选填，方便我们联系您) ">
+    </div>
+  </div>
+</div>
+
+<a href="#" class="weui-btn weui-btn_primary">提交</a>
+</body>
+<script>
+var BtnB = document.getElementsByClassName('quxiao')[0];
+BtnB.onclick = function(){
+    window.location.href="user_index.html";
+}
+</script>
+
+</html>

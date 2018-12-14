@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>会员列表</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:#F2F2F2;
+        font-size: 14px;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background:#28D044;
+        color:white;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .weui-navbar__item{
+        height: 50px;
+        padding: 0;
+      }
+      .weui-navbar__item.weui-bar__item--on{
+        color:#FF993E;
+      }
+      .weui-tab__bd .box{
+        margin-top: 50px;
+      }
+      .weui-tab__bd .box img{
+        width: 50px;
+        display: block;
+        margin: 0 auto;
+      }
+      .weui-tab__bd .box p{
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui.png"/>
+	<b>会员列表</b>
+</div>
+<div class="weui-tab">
+  <div class="weui-navbar">
+    <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+      0<br/>一级会员
+    </a>
+    <a class="weui-navbar__item" href="#tab2">
+      0<br/>二级会员
+    </a>
+    <a class="weui-navbar__item" href="#tab3">
+       0<br/>三级会员
+    </a>
+  </div>
+  <div class="weui-tab__bd">
+    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+      <div class="box">
+      	<img src="img/jiedianhuiyuanfenzu.png" />
+      	<p align="center">暂无下级会员哦！</p>
+      </div>
+    </div>
+    <div id="tab2" class="weui-tab__bd-item">
+      <div class="box">
+      	<img src="img/jiedianhuiyuanfenzu.png" />
+      	<p align="center">暂无下级会员哦！</p>
+      </div>
+    </div>
+    <div id="tab3" class="weui-tab__bd-item">
+      <div class="box">
+      	<img src="img/jiedianhuiyuanfenzu.png" />
+      	<p align="center">暂无下级会员哦！</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="lib/jquery-2.1.4.js"></script>
+<script src="js/jquery-weui.js"></script>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="fenxiao.html";
+  }
+</script>
+
+</html>

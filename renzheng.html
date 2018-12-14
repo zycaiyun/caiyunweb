@@ -37,7 +37,7 @@
         display: block;
       }
       .daohang{
-        height: 60px;
+        height: 50px;
       }
       .daohang li{
         float: left;
@@ -45,8 +45,11 @@
         width: 40%;
         font-weight: bold;
         margin-left: 10%;
-        line-height: 60px;
+        line-height: 50px;
         color:#9F9F9F;
+      }
+      .li.active{
+        color: #000000;
       }
       .content{
         font-size: 14px;
@@ -59,7 +62,7 @@
         border: 3px solid #C0C0C0;
         margin-left: 10%;
         margin-bottom: 5px;
-        height: 100px;
+        height: 90px;
         border-radius: 15px;
       }
       .box img{
@@ -89,6 +92,9 @@
          font-size: 14px;
          border-radius: 20px;
       }
+      .content .p1{
+        margin-top: 20px;
+      }
       .content .quxiao{
          display: block;
          width: 80%;
@@ -99,6 +105,13 @@
          margin: 0 auto;
          font-size: 14px;
          border-radius: 20px;
+         margin-top: 0;
+      }
+      .content{
+        display: none;
+      }
+      .content.active{
+        display: block;
       }
     </style>
 </head>
@@ -106,21 +119,30 @@
 <body>
 <div class="nav">
     <img class="black" src="img/fanhui.png" />
-	<b>实名认证</b>
+	<b class="biaoti">实名认证</b>
 </div>
 <div class="daohang">
 	<ul>
-	   <li class="aa">实名认证</li>
-	   <li class="ab">商家认证</li>  
+	   <li class="li active">实名认证</li>
+	   <li class="li">商家认证</li>  
 	</ul>
 </div> 
+<div class="content active">
+	<p>为有效保障您的资金安全，提升订单处理效率，请填写与您身份证一致的信息，否则不会通过审核。</p>
+	<p class="p1" style="color: #000000;">真实姓名</p>
+	<input type="text" placeholder="请填写您本人的真实姓名" />
+	<p style="color: #000000;">身份证号</p>
+	<input type="text" placeholder="请填写您本人的身份证号" />
+	<button class="tijiao">提交认证</button><br>
+	<button class="quxiao">取消</button>
+</div>
 <div class="content">
 	<p>为有效保障您的资金安全，提升订单处理效率，请填写与您身份证一致的信息，否则不会通过审核。</p>
 	<div class="box">
 		<img src="img/ai-camera.png" width="50px"/>
 		<p align="center">营业执照</p>
 	</div>
-	<p style="color: #000000;">真实姓名</p>
+	<p class="p1" style="color: #000000;">真实姓名</p>
 	<input type="text" placeholder="请填写您本人的真实姓名" />
 	<p style="color: #000000;">身份证号</p>
 	<input type="text" placeholder="请填写您本人的身份证号" />
@@ -129,31 +151,31 @@
 </div>
 
 
+
+
 </body>
 <script>
   var BtnB = document.getElementsByClassName('black')[0];
   BtnB.onclick = function(){
     window.location.href="user_index.html";
   }
-//var aLi = document.getElementsByClassName('aa');
-//for(var i=0;i<aLi.length;i++){
-//   aLi[i].onclick = function(){
-//      for(var j=0;j<aLi.length;j++){
-//          aLi[j].className = 'aa';
-//      }
-//      this.className = 'aa active';
-//   }
-//}
-  var Btna = document.getElementsByClassName('aa')[0];
-  var Btnb = document.getElementsByClassName('ab')[0];
-  Btna.onclick = function(){
-     Btna.style.color = '#000000';
-     BtnB.style.color = '#9F9F9F';
-  }
-  Btnb.onclick = function(){
-     Btna.style.color = '#9F9F9F';
-     Btnb.style.color = '#000000';
-  }
+var aLi = document.getElementsByClassName('li');
+var aDiv = document.getElementsByClassName('content');
+var biaoti = document.getElementsByClassName('biaoti')[0];
+  for (var i = 0; i < aLi.length; i++) {
+			aLi[i].index = i;
+			//远点设置监听
+			aLi[i].onclick = function(){
+//				//点击之前先清空
+				for (var j = 0; j < aLi.length; j++) {
+					aLi[j].className = 'li';
+					aDiv[j].className = 'content';
+				}
+				this.className = 'li active';
+				aDiv[this.index].className = 'content active';
+				biaoti.innerHTML = aLi[this.index].innerHTML;
+			}
+		}
   
 </script>
 
