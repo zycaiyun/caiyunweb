@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>详情</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="lib/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.css">
+    <link rel="stylesheet" href="css/demos.css">
+    <style>
+       .body{
+         font-size:14px;
+       }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background:#EDEDED;
+        border-bottom: 1px solid #919191;
+      }
+      .nav .black{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav .fenxiang{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+       .swiper-container {
+        width: 100%;
+      } 
+      .swiper-container img {
+        display: block;
+        width: 100%;
+      }
+      .content .word{
+        margin-left:20px;
+        margin-top: 10px;
+      }
+      .word b{
+        font-size: 12px;
+      }
+      .weui-cell.weui-cell_access{
+        border-top:5px solid #EFEFEF;
+        font-size:14px;
+        color: #B2B2B5;
+      }
+      .Img{
+        border-top:20px solid #EBECEC; 
+        border-bottom:20px solid #EBECEC;
+      }
+      .Img img{
+         width: 100%;
+      }
+      .fotter{
+        width: 100%;
+        position:fixed;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        background:white;
+        color: white;
+      }
+      .fotter .lef{
+        width: 40%;
+        background:white;
+        float: left;
+      }
+      .lef .img1{
+        width: 25px;
+        margin-left: 8%;
+        margin-top: 12px;
+      }
+      .lef .img2{
+        width: 20px;
+        margin-left: 8%;
+         margin-top: 12px;
+      }
+      .lef .img3{
+        width: 23px;
+        margin-left: 8%;
+         margin-top: 12px;
+      }
+      .fotter .cen{
+        width: 30%;
+        background:#EB6100;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+      }
+      .fotter .rig{
+         width: 30%;
+         background:#E60012;
+         float: left;
+         height: 50px;
+         line-height: 50px;
+         text-align: center;
+      }
+      .shopping{
+         position: fixed;
+         height: 60%;
+         background:white;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         z-index: 100;
+         display: none;
+      }
+      .shopping .guanbi{
+         position: absolute;
+         width: 20px;
+         top:10px;
+         right: 10px;
+      }
+      .shopping .img{
+        width: 100px;
+        margin-top:8%;
+        margin-left:5%;
+      }
+      .shopping .text{
+        position: absolute;
+        margin-top:-60px;
+        margin-left:40%;
+      }
+      .shopping .text b{
+        font-weight:normal;
+        font-size: 16px;
+        color: red;
+      }
+      .shopping .text del{
+        font-size: 12px;
+        color: #AAA9AA;
+      }
+      .shopping .text p{
+        font-size:12px;
+        color: #AAA9AA;
+      }
+      .num{
+        margin-top: 10%;
+        margin-left: 5%;
+        position: relative;
+      }
+      .num .box{
+        width: 30%;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        text-align: center;
+      }
+      .box span{
+        margin-left: 10px;
+      }
+      .shopping button{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        background:#28D044;
+        color: white;
+        font-size: 16px;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui (1).png" />
+	<b>红蒜苗</b>
+	<img class="fenxiang" src="img/xiangqing1 (1).png" />
+</div>
+ <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/1.jpg"/></div>
+        <div class="swiper-slide"><img src="img/1.jpg"/></div>
+        <div class="swiper-slide"><img src="img/1.jpg"/></div>
+      </div>
+      <div class="swiper-pagination"></div>
+</div>
+<div class="content">
+    <div class="word">
+       <p>红蒜苗</p>
+	   <p style="font-size: 12px;color: red;">配送仅限两城区(红花岗区，汇川区)及商家</p>
+	   <p style="font-size: 18px;color: red;">0.70/两</p>
+	   <del style="color:#A4A5A8;font-size: 12px;">原价：0.84/两</del><br/>
+	   <b style="font-weight: normal;">1人评价</b>
+	   <b style="font-weight: normal;margin-left: 30%;">15人已购</b>
+    </div>
+	<div class="weui-cells">
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+        <div class="weui-cell__bd">
+          <p>会员等级价格</p>
+        </div>
+        <div class="weui-cell__ft">
+        </div>
+        </a>
+        <a class="weui-cell weui-cell_access" href="javascript:;">
+        <div class="weui-cell__bd">
+          <p>产品参数</p>
+        </div>
+        <div class="weui-cell__ft">
+        </div>
+        </a>
+    </div>
+    <div class="Img">
+    	<img src="img/jieshao.jpg" />
+    	<img src="img/shitu.jpg">
+    	<img src="img/shitu2.jpg">
+    	<img src="img/shitu3.jpg">
+    	<img src="img/shitu4.jpg">
+    	<img src="img/shitu5.jpg">
+    	<img src="img/shitu6.jpg">
+    	<img src="img/shitu7.jpg">
+    	<img src="img/shitu8.jpg">
+    	<img src="img/shitu9.jpg">
+    	<img src="img/shitu10.jpg">
+    	<img src="img/shitu11.jpg">	
+    </div>
+</div>
+<div class="fotter">
+	<div class="lef">
+		<img class="img1" src="img/xiangqing1 (2).png">
+		<img class="img2" src="img/xiangqing1 (3).png">
+		<img class="img3" src="img/xiangqing1 (4).png">
+	</div>
+	<div class="cen">
+		加入购物车
+	</div>
+	<div class="rig">
+		立即购买
+	</div>
+</div>
+<div class="shopping">
+	<img class="guanbi" src="img/guanbi.png">
+	<img class="img" src="img/1.jpg" />
+	<div class="text">
+		<b>0.70/两</b>
+		<del>0.84/两</del>
+		<p>库存：1000斤</p>
+	</div>
+	<div class="num">
+		<b>数量</b>
+		<div class="box">
+			<span>-</span>
+			<span style="color: red;">100</span>
+			<span>+</span>
+		</div>	
+	</div>
+	<button class="button">确认</button>
+</div>
+</body>
+<script src="lib/jquery-2.1.4.js"></script>
+<script src="lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script src="js/jquery-weui.js"></script>
+<script src="js/swiper.js"></script>
+    <script>
+      $(".swiper-container").swiper({
+        loop: true,
+        autoplay: 1000
+      });
+    </script>
+
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="#";
+  }
+  var Shop = document.getElementsByClassName('shopping')[0];
+  var GuanBI = document.getElementsByClassName('guanbi')[0];
+  var Btnshop = document.getElementsByClassName('rig')[0];
+  Btnshop.onclick = function(){
+     Shop.style.display = 'block';
+  }
+  GuanBI.onclick = function(){
+     Shop.style.display = 'none';
+  }
+  var Button = document.getElementsByClassName('button')[0];
+  Button.onclick = function(){
+     window.location.href="queren.html";
+  }
+</script>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>通知消息</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <style>
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        border-bottom: 1px solid #919191;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .weui-cell{
+        margin-top: 10px;
+        border-bottom: 1px solid #EEEEEF;
+      }
+      .weui-cell img{
+        width: 50px;
+      }
+      .weui-cell span{
+        font-size: 12px;
+      }
+      .weui-cell .weui-cell__ft{
+        position: absolute;
+        top: 8px;
+        right: 30px;
+      }
+      .weui-cell__bd{
+        margin-left: 10px;
+      }
+     
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui (1).png" />
+	<b>通知消息</b>
+</div>
+  <div class="weui-cell">
+    <div class="weui-cell__hd"><img src="img/daijinquan.png"></div>
+    <div class="weui-cell__bd">
+      <p>代金券过期通知</p>
+      <span>您有代金券将在3天内过期，立即查看代金券 》</span>
+    </div>
+    <div class="weui-cell__ft">2018-10-20</div>
+  </div>
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="index_xiaoxi.html";
+  }
+</script>
+
+</html>

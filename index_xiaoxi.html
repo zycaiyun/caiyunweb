@@ -100,7 +100,7 @@
   </div> 
 </div>
 <div class="weui-cells">
-  <div class="weui-cell">
+  <div class="weui-cell" id="xiao">
     <div class="weui-cell__hd">
       <img src="img/tongzhi.jpg">
     </div>
@@ -109,14 +109,17 @@
       <b>您有一张代金券即将过期！</b>
     </div>  
   </div> 
+
 </div>
-
-
 </body>
 <script>
   var BtnB = document.getElementsByClassName('black')[0];
   BtnB.onclick = function(){
     window.location.href="index.html";
+  }
+  var Bxiao = document.getElementById('xiao');
+  Bxiao.onclick = function(){
+    window.location.href="tongzhi.html";
   }
 </script>
 

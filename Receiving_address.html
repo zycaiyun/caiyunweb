@@ -44,48 +44,13 @@
          left: 9%;
          bottom: 60px;
       }
-      .content{
-        margin-top: 20px;
-        background: white; 
-        overflow: hidden;
-      }
-      .weui-cell.aa b{
-       font-size: 16px;
-       font-weight: normal;
-      }
-      .weui-cell.aa .marleft{
-         margin-left: 20px;
-      }
-      .weui-cell.ab{
+      .weui-cells.weui-cells_checkbox{
         position: relative;
       }
-      .weui-cell.ab b{
-        font-size: 12px;
-        font-weight: normal;
-        color: #A8A8A8;
-      }
-      .weui-cell.ab .one{
-        width: 40px;
+      .weui-cells.weui-cells_checkbox .box{
         position: absolute;
-        left: 15px;
-        top: 13px;
-        background: #FF1426;
-        text-align: center;
-        color: white;
-        border-radius: 4px;
-      }
-      .weui-cell.ab .two{
-        margin-left: 50px;
-      }
-      .bianji{
-        font-size: 12px;
-        color: #A8A8A8;
-        float: right;
-        margin-right: 30px;
-      }
-      .bianji b{
-        font-weight: normal;
-        margin-left: 20px;
+        bottom: 0;
+        right: 0;
       }
     </style>
 </head>
@@ -93,32 +58,33 @@
 <body>
 <div class="nav">
     <img class="black" src="img/fanhui.png" />
-	<b>收货地址管理</b>
+	<b>选择收货地址</b>
 </div>
-<div class="content">         
-	<div class="weui-cell aa">
-        <b>张三</b>
-        <b class="marleft">185****1234</b>
+<div class="weui-cells weui-cells_checkbox">
+  <label class="weui-cell weui-check__label" for="s12">
+    <div class="weui-cell__hd">
+      <input type="checkbox" name="checkbox1" checked="checked" class="weui-check" id="s12">
+      <i class="weui-icon-checked"></i>
     </div>
-    <div class="weui-cell ab">
-         <b class="one">默认</b>
-       	 <b class="two">贵州省遵义市汇川区昆明路金创大厦1604遵义菜云农副食品有限公司</b>
-      <a class="weui-cell weui-cell_access" href="javascript:;">
-		<div class="weui-cell__ft">
-		</div>
-	  </a>
+    <div class="weui-cell__bd">
+      <p>
+         <b style="font-weight: normal;font-size: 14px;">收货人：***</b>
+         <b style="font-weight: normal; margin-left: 10%;font-size:14px;">电话：188********</b>   
+      </p>
+      <p style="font-size: 14px;">地址：贵州省遵义市汇川区昆明路唯一国际金创大厦1604</p>
     </div>
-    <div class="bianji">
-    	<b>编辑</b>
-    	<b>删除</b>	
-    </div>
+  </label>
+  <div class="box">
+  	<b>编辑</b>
+  	<b>删除</b>	
+  </div>
 </div>
-<a href="add_dizhi.html" class="weui-btn weui-btn_primary">+ 添加新地址</a>
+<a href="#" class="weui-btn weui-btn_primary">+ 添加新地址</a>
 </body>
 <script>
   var BtnB = document.getElementsByClassName('black')[0];
   BtnB.onclick = function(){
-    window.location.href="user_shezhi.html";
+    window.location.href="queren.html";
   }
 </script>
 

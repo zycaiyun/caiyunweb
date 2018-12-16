@@ -159,9 +159,9 @@
           <p>收藏</p>
             </div>
             <div class="fr">
-            	  <svg class="icon" aria-hidden="true">
+            	 <svg class="icon" id="footprint" aria-hidden="true">
             <use xlink:href="#icon-footprint"></use>
-          </svg>
+             </svg>
           <p>浏览足迹</p>
             </div>
           </div>
@@ -386,7 +386,7 @@
       });
     </script>
     <script>
-      var SC = document.getElementsByClassName('shoucang')[0];
+      var SC = document.getElementById('shoucang');
       SC.onclick = function(){
          window.location.href="shoucang.html";
       }

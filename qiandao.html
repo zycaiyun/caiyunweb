@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./lib/weui.min.css">
     <link rel="stylesheet" href="./css/jquery-weui.css">
     <link rel="stylesheet" href="./css/demos.css">
-    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
     <style>
       body{
         background:#F2F2F2;
@@ -21,6 +20,7 @@
         position: relative;
         background: #71D9FF;
         color: white;
+        border-bottom:1px solid white;
       }
       .nav img{
         width: 14px;
@@ -42,15 +42,12 @@
       }
       .img img{
         width: 100%;
-        margin-top: 2px;
+        /*margin-top: 2px;*/
       }
       .content input{
        display: block;
        margin: 0 auto;
-       text-align: center;  
-      }
-      .box{
-        margin-top: 130px; 
+       text-align: center; 
       }
       .box button{
         width: 70%;
@@ -69,9 +66,8 @@
     </style>
 </head>
 <script src="lib/jquery-2.1.4.js"></script>
-<!--<script src="lib/fastclick.js"></script>-->
 <script src="js/jquery-weui.js"></script>
-<body>
+<body ontouchstart>
 <div class="nav">
     <img class="black" src="img/fanhui.png" />
 	<p>签到</p>
@@ -81,40 +77,45 @@
 	<img src="img/beijing.png"/>
 </div>
 <div class="content">
-	<!--html代码中写一个用到当做触发元素的input -->
-	<p align="center">请选择日期：</p>
-   <input type="text"  data-toggle='date' id="my-input"/>
+	 <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="date3" type="text">
+        </div>
+      </div>
+    </div>
+    <div id="inline-calendar"></div>
 </div>
 <div class="box">
    <p align="center">你已经连续签到*天</p>
    <button>已签到 去分享</button>
 </div>
-   <!--js代码初始化改input -->
-<script>
-//  $("body").calendar();
-    $('#my-input').calendar();
-//toolbarTemplate: 
-//  '<div class="toolbar">' +
-//      '<div>' +
-//        '<a href="javascript:;" class="weui-btn weui-btn_primary noTime">时间不限</a>'+
-//      '</div>'+
-//      '<div class="toolbar-inner">' +
-//          '{{yearPicker}}' +
-//          '{{monthPicker}}' +
-//      '</div>' +
-//    '</div>'
-//
-// $("body").on("click",function(e){
-//    if($(e.target).hasClass("noTime")){
-//        //单击时赋值并且关闭时间插件
-//        $("#shijian").val("时间不限").calendar("close");
-//    }
-//})
-   </script>
-   
-	
-
 </body>
+<!--<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>-->
+<script>
+      $("#date").calendar({
+        onChange: function (p, values, displayValues) {
+          console.log(values, displayValues);
+        }
+      });
+      $("#date2").calendar({
+        value: ['2016-12-12'],
+        dateFormat: 'yyyy年mm月dd日'  // 自定义格式的时候，不能通过 input 的value属性赋值 '2016年12月12日' 来定义初始值，这样会导致无法解析初始值而报错。只能通过js中设置 value 的形式来赋值，并且需要按标准形式赋值（yyyy-mm-dd 或者时间戳)
+      });
+      $("#date-multiple").calendar({
+        multiple: true,
+        onChange: function (p, values, displayValues) {
+          console.log(values, displayValues);
+        }
+      });
+      $("#date3").calendar({
+        container: "#inline-calendar"
+      });
+</script>
 <script>
   var BtnB = document.getElementsByClassName('black')[0];
   BtnB.onclick = function(){
