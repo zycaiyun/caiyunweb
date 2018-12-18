@@ -56,9 +56,13 @@
 		.weui-cell_link{
 			color: black;
 		}
-		.current{
-			color: red;
+		.weui-cell__bds{
+		  color: #000000;  
 		}
+		.weui-cell__bds.active{
+		  color: #9DFE81;
+		}
+		
 	</style>
   </head>
 
@@ -101,21 +105,21 @@
 				</div>
 			</div>
 			<div>
-				<div class="" style="width: 25%;display: inline-block;background: #d5d5d6;">
-					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
-						<div class="weui-cell__bd current">蔬菜类</div>
+				<div class="" style="width: 25%;display: inline-block;">
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link current active">
+						<div class="weui-cell__bds active">蔬菜类</div>
 					</a>
-					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
-						<div class="weui-cell__bd">菌菇类</div>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link current">
+						<div class="weui-cell__bds">菌菇类</div>
 					</a>
-					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
-						<div class="weui-cell__bd">水货类</div>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link current">
+						<div class="weui-cell__bds">水货类</div>
 					</a>
-					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
-						<div class="weui-cell__bd">腌菜类</div>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link current">
+						<div class="weui-cell__bds">腌菜类</div>
 					</a>
-					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link" style="border-left: 2px solid #1aad19;">
-						<div class="weui-cell__bd">其他</div>
+					<a href="javascript:void(0);" class="weui-cell weui-cell_access weui-cell_link current">
+						<div class="weui-cell__bds">其他</div>
 					</a>
 				</div>
 				<div class="" style="width: 74%;display: inline-block;float: right;overflow: scroll;height: 530px;margin-bottom: 30px;">
@@ -279,12 +283,27 @@ $(function(){
   });
 </script>
 <script src="./js/jquery-weui.js"></script>
-
     <script>
       $("#a").select({
         title: "选择职业",
         items: ["法官", "医生", "猎人", "学生", "记者", "其他"]
       });
     </script>
+    <script>
+      var aLi = document.getElementsByClassName('weui-cell__bds');
+      for(var i=0;i<aLi.length;i++){
+        aLi[i].index = i;
+        aLi[i].onclick = function(){
+           for(var j=0;j<aLi.length;j++){
+             aLi[j].className = 'weui-cell__bds';
+           }
+          aLi[this.index].className = 'weui-cell__bds active';
+        }
+        
+      }
+    </script>
+      
+        
+      
   </body>
 </html>

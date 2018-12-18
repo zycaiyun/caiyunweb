@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>提现</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+	">
+    <link rel="stylesheet" href="./lib/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <style>
+      body{
+        background:#F2F2F2;
+      }
+      .nav{
+        height: 50px;
+        font-size: 16px;
+        position: relative;
+        background:white;
+        color: #000000;
+      }
+      .nav img{
+        width: 14px;
+        position: absolute;
+        top: 18px;
+        left: 20px;
+      }
+      .nav b{
+        font-weight: normal;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+      }
+      .weui-btn.weui-btn_primary{
+         background:#FF0000;
+         color: white;
+         width: 88%;
+         margin-top: 60px; 
+         border-radius: 10px;
+      }
+      .time{
+        background:#FF6773;
+        color: white;
+        height: 40px;
+        line-height: 40px;
+      }
+      .weui-cell{
+         background: white;
+      }
+      .weui-cell.aa{
+        border-bottom:10px solid #E5E5E5;
+      }
+      .zhifu{
+        height: 30px;
+        background:#EDEDED;
+        margin-left: 15px;
+        font-size: 14px;
+        line-height: 30px;
+      }
+      .weui-cells.weui-cells_radio{
+        margin-top: 0;
+      }
+      .weui-cells.weui-cells_radio img{
+        width: 20px;
+      }
+      .weui-check__label{
+        border-bottom: 2px solid #EDEDED;
+      }
+    </style>
+</head>
+
+<body>
+<div class="nav">
+    <img class="black" src="img/fanhui (1).png" />
+	<b>收银台</b>
+</div>
+<div class="time">
+	<p align="center">支付剩余时间：00 : 14 : 59</p>
+</div>
+<div class="weui-cell aa">
+    <div class="weui-cell__bd">
+      <p>支付金额</p>
+    </div>
+    <div class="weui-cell__ft">
+      <span style="color: red;margin-right: 20px;">&yen; 70.00</span>
+    </div>
+</div>
+ <p class="zhifu">请选择支付方式 </p>
+<div class="weui-cells weui-cells_radio">
+  <label class="weui-cell weui-check__label" for="x11">
+    <div class="weui-cell__hd">
+        <img src="img/weixinzhifu.png">
+    </div>
+    <div class="weui-cell__bd">
+      <p>微信快捷支付</p>
+    </div>
+    <div class="weui-cell__ft">
+      <input type="radio" class="weui-check" name="radio1" id="x11">
+      <span class="weui-icon-checked"></span>
+    </div>
+  </label>
+  <label class="weui-cell weui-check__label" for="x12">
+    <div class="weui-cell__hd">
+        <img src="img/zhifubaozhifu.png">
+    </div>
+    <div class="weui-cell__bd">
+      <p>支付宝快捷支付</p>
+    </div>
+    <div class="weui-cell__ft">
+      <input type="radio" name="radio1" class="weui-check" id="x12" checked="checked">
+      <span class="weui-icon-checked"></span>
+    </div>
+  </label>
+</div>
+<a href="fingerprint.html" class="weui-btn weui-btn_primary">立即支付</a>
+</body>
+<script>
+  var BtnB = document.getElementsByClassName('black')[0];
+  BtnB.onclick = function(){
+    window.location.href="queren.html"; 
+  }
+</script>
+
+</html>

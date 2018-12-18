@@ -164,10 +164,21 @@
        color: white;
        font-size: 16px;
      }
+     .invoice input{
+       width: 100%;
+       border: none;
+       height: 20px;
+       margin: 0; 
+     }
+     .weui-cells.weui-cells_form{
+       margin: 0;
+       font-size: 12px;
+       margin-left: 10px;
+     }
     </style>
 </head>
 
-<body>
+<body ontouchstart>
 <div class="nav">
     <img class="black" src="img/fanhui (1).png" />
 	<b>确认订单</b>
@@ -199,7 +210,7 @@
   </div>
   <p style="margin-top: 5px;font-size: 14px;">订单总价达到20元起送</p>
   <p class="one">同城快递</p>
-  <p style="font-size: 14px;color: #878787;">商家将尽快为您安排配送：运费3.00满58.00免邮</p>
+  <p style="font-size: 12px;color: #878787;">商家将尽快为您安排配送：运费3.00满58.00免邮</p>
 </div>
 <div class="weui-cells active">
   <div class="weui-cell aa">
@@ -258,11 +269,33 @@
       <img style="width: 12px;" src="img/iconfontjiantou.png" />
     </div>
   </div>
-  
   <div class="weui-cell">
-              配送时段
+       <p>配送时段</p>
+        <div class="weui-cells weui-cells_form">
+	        <input class="weui-input" type="date" value="">    
+	    </div>
+        <select>
+         <option>07:00-08:00</option>
+         <option>08:00-09:00</option>
+         <option>09:00-10:00</option>
+         <option>10:00-11:00</option>
+         <option>11:00-12:00</option>
+         <option>12:00-13:00</option>
+         <option>13:00-14:00</option>
+         <option>14:00-15:00</option>
+         <option>15:00-16:00</option>
+         <option>16:00-17:00</option>
+         <option>17:00-18:00</option> 
+        </select>
   </div>
-  
+  <div class="weui-cell">
+       <p>配送中心</p>
+       <select>
+         <option>凉水井配送中心</option>
+         <option>高桥配送中心</option>
+         <option>海风井配送中心</option>
+        </select>
+  </div>
   <div class="weui-cell input">
     <div class="weui-cell__hd">
        <img src="img/remark.png">
@@ -288,7 +321,7 @@
 <div class="fukuan">
 	<b style="margin-left: 30px;font-size: 16px;">实付款：</b>
 	<b style="color: red;font-size: 14px;">&yen; 70.00</b>
-	<button>确认订单</button>
+	<button class="button">确认订单</button>
 </div>
 </body>
 <script>
@@ -296,6 +329,38 @@
   BtnB.onclick = function(){
     window.location.href="xiangqing.html";
   }
+  var BtnButton = document.getElementsByClassName('button')[0];
+  BtnButton.onclick = function(){
+    window.location.href="Cashier.html";
+  }
+  
+//var myDate = new Date();
+//var year = myDate.getFullYear();
+//var month = myDate.getMonth()+1;
+//var mon;
+//
+//var day = myDate.getDate();
+//var Day;
+//
+//if(month == 12 && day == 31){
+//  mon = 1;
+//}else{
+//  mon = month + 1;
+//}
+//
+//if((month==1||month==3||month==5||month==7||month==8||month==10||month==12) && day==31){
+//  Day = 1;
+//}else if( (month==4||month==6||month==9||month==11) && day==30){
+//  Day = 1;
+//}else if( month ==2 && day == 28){
+//  Day = 1;
+//}else{
+//  Day = day +1;
+// }
+//console.log(Day);
+//var Option = document.getElementsByClassName('option');
+//Option[0].innerHTML = year+':'+month+':'+day;
+//Option[1].innerHTML = year+':'+month+':'+Day;
+  
 </script>
-
 </html>

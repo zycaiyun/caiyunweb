@@ -255,9 +255,9 @@
 	<div class="num">
 		<b>数量</b>
 		<div class="box">
-			<span>-</span>
-			<span style="color: red;">100</span>
-			<span>+</span>
+			<span class="dec">-</span>
+			<span class="number" style="color: red;">1</span>
+			<span class="add">+</span>
 		</div>	
 	</div>
 	<button class="button">确认</button>
@@ -282,7 +282,7 @@
 <script>
   var BtnB = document.getElementsByClassName('black')[0];
   BtnB.onclick = function(){
-    window.location.href="#";
+    window.location.href="buttons.html";
   }
   var Shop = document.getElementsByClassName('shopping')[0];
   var GuanBI = document.getElementsByClassName('guanbi')[0];
@@ -296,6 +296,25 @@
   var Button = document.getElementsByClassName('button')[0];
   Button.onclick = function(){
      window.location.href="queren.html";
+  }
+  var Bdec = document.getElementsByClassName('dec')[0];
+  var Badd = document.getElementsByClassName('add')[0];
+  Bdec.onclick = function(){
+    var num = document.getElementsByClassName('number')[0];
+    var a = Number(num.innerHTML);
+    if(a>1){
+       a--;
+       num.innerHTML = a;
+    }else{
+      num.innerHTML = 1;
+    }
+    
+  }
+  Badd.onclick = function(){
+    var num = document.getElementsByClassName('number')[0];
+    var a = Number(num.innerHTML);
+    a++;
+    num.innerHTML = a;
   }
 </script>
 
