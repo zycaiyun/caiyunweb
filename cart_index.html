@@ -14,6 +14,14 @@
 <link rel="stylesheet" href="./css/demos.css">
 <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
 <link rel="stylesheet" href="css/shopping.css" />
+   <style>
+     .xiaojie{
+       display: none;
+     }
+     .jiesheng{
+       display: none;
+     }
+   </style>
   </head>
   <body ontouchstart>
 
@@ -51,16 +59,19 @@
 						  <h1 style="padding-left: 20px;font-size: 12px;color: #888;">&nbsp;</h1>
 							<h1 style="padding-left: 20px;font-size: 14px;color: #000000;">红蒜苗</h1>
 							<h1 style="padding-left: 20px;font-size: 12px;color: #888;">&nbsp;</h1>
-							<h1 style="padding-left: 20px;font-size: 14px;color: red;font-weight: normal;">&yen; 0.70
-							  <del style="color: #c7c7c7; font-size: 12px;">0.84</del>
+							<h1 style="padding-left: 20px;font-size: 14px;color: red;font-weight: normal;">&yen; 
+							   <span class="mon">0.70</span>
+							  <del class="jie" style="color: #c7c7c7; font-size: 12px;">0.84</del>
+							  <span class="xiaojie"></span>
+							  <span class="jiesheng"></span>
 							</h1>
 						</div>
 					</a>
         </label> 
         <div class="num">
-							 <button class="reduce" id="button1">-</button>
-							 <span class="UnitPrice" style="font-size: 14px;">1</span>
-							 <button class="increase" id="button2">+</button>
+							 <button class="reduce">-</button>
+							 <span class="UnitPrice" style="font-size: 14px;">0</span>
+							 <button class="increase">+</button>
 				</div>
       </div>  
       
@@ -88,17 +99,20 @@
 							<h1 style="padding-left: 20px;font-size: 12px;color: #888;">&nbsp;</h1>
 							<h1 style="padding-left: 20px;font-size: 14px;color: #000000;">火锅白菜</h1>
 							<h1 style="padding-left: 20px;font-size: 12px;color: #888;">&nbsp;</h1>
-							<h1 style="padding-left: 20px;font-size: 14px;color: red;font-weight: normal;">&yen; 2.80
-							  <del style="color: #c7c7c7; font-size: 12px;">3.36</del>
+							<h1 style="padding-left: 20px;font-size: 14px;color: red;font-weight: normal;">&yen; 
+							  <span class="mon">2.80</span>
+							  <del class="jie" style="color: #c7c7c7; font-size: 12px;">3.36</del>
+							  <span class="xiaojie"></span>
+							   <span class="jiesheng"></span>
 							</h1>
 							
 						</div>
 					</a>
         </label>  
         <div class="num">
-							 <button class="reduce" id="button3">-</button>
-							 <span class="UnitPrice" style="font-size: 14px;">1</span>
-							 <button class="increase" id="button4">+</button>
+							 <button class="reduce">-</button>
+							 <span class="UnitPrice" style="font-size: 14px;">0</span>
+							 <button class="increase">+</button>
 				</div>
       </div>  
       <!--总结-->
@@ -108,7 +122,7 @@
        
         <label class="weui-cell weui-check__label summary"  for="s15">
           <div class="weui-cell__hd">
-            <input type="checkbox" class="weui-check" name="checkbox1" id="s15">
+            <input type="checkbox" class="weui-check" name="checkbox" id="s15">
             <i class="weui-icon-checked"></i>
           </div>
                <b style="font-weight: normal;">全选</b>
@@ -126,191 +140,184 @@
       </div> 
       <!--总结-->
       <script type="text/javascript">
-        var All = document.getElementById('s15');
-        var S11 = document.getElementById('s11');
-        var S12 = document.getElementById('s12');
-        var S13 = document.getElementById('s13');
-        var S14 = document.getElementById('s14');
-        
-         var Btn1 = document.getElementById('button1');
-		     var Btn2 = document.getElementById('button2');
-		     var Btn3 = document.getElementById('button3');
-		     var Btn4 = document.getElementById('button4');
-		     var As = document.getElementsByClassName('UnitPrice')[0];//第一个数量
-		     var Ab = document.getElementsByClassName('UnitPrice')[1];//第二个数量
-		     
-		     var Save = document.getElementById('save');  //节省
-	       var total = document.getElementById('Total'); //节省
-		     
-        S11.onclick = function(){
-          if(S11.checked){
-            var a = Number(As.innerHTML);
-            var c = (a*14/100);
-            var f = (a*7/10);
-        		var e = c.toFixed(2);
-        		var h = f.toFixed(2);
-        		
-      		  Save.innerHTML = e;
-        		total.innerHTML = h;
-            S12.checked = true;
-          }else{
-            S12.checked = false;
-            if(S13.checked){
-             var b = Number(Ab.innerHTML);
-        		 var d = (b*56/100);
-        		 var g = (b*28/10);
-        		 var e = d.toFixed(2);
-        		 var h = g.toFixed(2);
-        		 Save.innerHTML = e;
-        		 total.innerHTML = h;
-            }else{
-              Save.innerHTML = 0;
-        		 total.innerHTML = 0;
-            }
-          }
-           Btn1.onclick = function(){
-           num = As.innerHTML;
-             num--;
-           if(num<=0){
-            As.innerHTML = 0;
-            total.innerHTML = 0;
-            Save.innerHTML = 0;
-           }else{
-            As.innerHTML = num;
-            total.innerHTML = (num*7/10).toFixed(2);
-            Save.innerHTML = (num*14/100).toFixed(2);
+        var All = document.getElementById('s15');//全选
+        var S11 = document.getElementById('s11');// btn1
+        var S12 = document.getElementById('s12');// btn2
+        var S13 = document.getElementById('s13');// btn3
+        var S14 = document.getElementById('s14');// btn4
+
+         var Reduces = document.getElementsByClassName('reduce');  //减少
+         var increases = document.getElementsByClassName('increase'); //增加
+         var UnitPrices = document.getElementsByClassName('UnitPrice'); //数量
+         var XJ = document.getElementsByClassName('xiaojie'); //小节
+         var JS = document.getElementsByClassName('jiesheng'); //节省
+         var Save = document.getElementById('save');  //节省
+	       var total = document.getElementById('Total'); //总共
+	       var Mon = document.getElementsByClassName('mon');  //价格
+	       var Jie = document.getElementsByClassName('jie');  //节省
+         function add(){
+            var num;
+            var aa;
+            var Aa;
+            var ab;
+            var Ab;
+            var cc;
+            for(var i=0;i<increases.length;i++){
+            increases[i].index = i;
             
-           } 
-          }
-           
-        Btn2.onclick = function(){
-          var num = As.innerHTML;
-          num++;
-          As.innerHTML = num;
-          total.innerHTML = (num*7/10).toFixed(2);
-          Save.innerHTML = (num*14/100).toFixed(2);
-          }  
-        }
-        S13.onclick = function(){
-          if(S13.checked){
-               S14.checked = true; 
-               
-            if(S11.checked){
-               var a = Number(As.innerHTML);
-            var c = (a*14/100);
-            var f = (a*7/10);
-            
-        		var b = Number(Ab.innerHTML);
-        		var d = (b*56/100);
-        		var g = (b*28/10);
-        		var e = (c+d).toFixed(2);
-        		var h = (f+g).toFixed(2);
-        		
-      		  Save.innerHTML = e;
-        		total.innerHTML = h;
-            }
-            else{
-              var b = Number(Ab.innerHTML);
-	        		 var d = (b*56/100);
-	        		 var g = (b*28/10);
-	        		 var e = d.toFixed(2);
-	        		 var h = g.toFixed(2);
-	        		 Save.innerHTML = e;
-	        		 total.innerHTML = h;
-            }
-          }
-          else{
-            S14.checked = false;
-          }
-          if(!S11.checked){
-            Btn3.onclick = function(){
-            var num = Ab.innerHTML;
-            num--;
-            if(num<=0){
-            Ab.innerHTML = 0;
-            total.innerHTML = 0;
-            Save.innerHTML = 0;
-           }else{
-            Ab.innerHTML = num;
-            total.innerHTML = (num*28/10).toFixed(2);
-            Save.innerHTML = (num*56/100).toFixed(2);
+	            increases[i].onclick = function(){
+	               num = UnitPrices[this.index].innerHTML;
+	               num ++;
+	               UnitPrices[this.index].innerHTML = num; 
+	               aa = Mon[this.index].innerHTML; //价格
+	               Aa = Jie[this.index].innerHTML; //节省
+	               ab = aa*num;
+	               ab = ab.toFixed(2); 
+	               Ab = (Aa-aa)*num;
+	               Ab = Ab.toFixed(2); 
+	               XJ[this.index].innerHTML = ab; 
+	               JS[this.index].innerHTML = Ab;
+	               
+	               
+	               var priceTotal = 0;
+					         for(var j=0; j<XJ.length; j++){
+						       var subone = XJ[j].innerText;
+						       subone = Number(subone); 
+						       priceTotal += subone;
+					         }
+					         total.innerText = priceTotal;
+					         
+					       var pricesave = 0;
+					         for(var j=0;j<JS.length;j++){
+					           var subtwo = JS[j].innerText;
+					           subtwo = Number(subtwo);
+					           pricesave += subtwo;
+					         }
+					         Save.innerText = pricesave;
+					         
+                  } 
+                 
+	            }
+	           
             } 
-           }
-          Btn4.onclick = function(){
-          var num = Ab.innerHTML;
-          num++;
-          Ab.innerHTML = num;
-          total.innerHTML = (num*28/10).toFixed(2);
-            Save.innerHTML = (num*56/100).toFixed(2);
-           }
-          }else{//s11点击了
-          var aa = Number(total.innerHTML);
-          var bb = Number(Save.innerHTML);
-          Btn3.onclick = function(){
-            var num = Ab.innerHTML;
-            num--;
-            if(num<=0){
-              Ab.innerHTML = 0;
-           }else{
-            Ab.innerHTML = num;
-            var a = Number(As.innerHTML);
-            var c = (a*14/100);
-            var f = (a*7/10);
-        		var b = Number(Ab.innerHTML);
-        		var d = (b*56/100);
-        		var g = (b*28/10);
-        		var e = (c+d).toFixed(2);
-        		var h = (f+g).toFixed(2);
-      		  Save.innerHTML = e;
-        		total.innerHTML = h;
-            } 
-           }
-          Btn4.onclick = function(){
-		          var num = Ab.innerHTML;
-		          num++;
-		          Ab.innerHTML = num;
-		          var a = Number(As.innerHTML);
-            var c = (a*14/100);
-            var f = (a*7/10);
             
-        		var b = Number(Ab.innerHTML);
-        		var d = (b*56/100);
-        		var g = (b*28/10);
-        		var e = (c+d).toFixed(2);
-        		var h = (f+g).toFixed(2);
-        		
-      		  Save.innerHTML = e;
-        		total.innerHTML = h;
-           }
-          } 
-        }      
-        All.onclick = function(){
-          
-        	if(All.checked){//选中状态
-        		S11.checked = true;
-        		S12.checked = true;
-        		S13.checked = true;
-        		S14.checked = true;
-        		var a = Number(As.innerHTML);
-            var c = (a*14/100);
-            var f = (a*7/10);
-        		var b = Number(Ab.innerHTML);
-        		var d = (b*56/100);
-        		var g = (b*28/10);
-        		var e = (c+d).toFixed(2);
-        		var h = (f+g).toFixed(2);
-      		  Save.innerHTML = e;
-        		total.innerHTML = h;
-        	}
-        	else{//取消状态
-        		S11.checked = false;
-        		S12.checked = false;
-        		S13.checked = false;
-        		S14.checked = false;
-        		Save.innerHTML = 0;
-        		total.innerHTML = 0;
-        	}
-        }
+		     function dec(){
+		        var num;
+            var aa;
+            var Aa;
+            var ab;
+            var Ab;
+            var cc;
+		       for(var i=0;i<Reduces.length;i++){
+            Reduces[i].index = i;
+	            Reduces[i].onclick = function(){
+	            
+	               var num = UnitPrices[this.index].innerHTML;
+	               num --;
+	               if(num>=0){
+	                 UnitPrices[this.index].innerHTML = num;
+	                 
+	                 
+	               aa = Mon[this.index].innerHTML; //价格
+	               Aa = Jie[this.index].innerHTML; //节省
+	               ab = aa*num;
+	               ab = ab.toFixed(2); 
+	               Ab = (Aa-aa)*num;
+	               Ab = Ab.toFixed(2); 
+	               XJ[this.index].innerHTML = ab; 
+	               JS[this.index].innerHTML = Ab;
+	               
+	               var priceTotal = 0;
+					         for(var j=0; j<XJ.length; j++){
+						       var subone = XJ[j].innerText;
+						       subone = Number(subone); 
+						       priceTotal += subone;
+					         }
+					         total.innerText = priceTotal;
+					         
+					       var pricesave = 0;
+					         for(var j=0;j<JS.length;j++){
+					           var subtwo = JS[j].innerText;
+					           subtwo = Number(subtwo);
+					           pricesave += subtwo;
+					         }
+					         Save.innerText = pricesave;
+	                 
+	               }else{
+	                 UnitPrices[this.index].innerHTML = 0;
+	                 total.innerText = 0;
+	                 Save.innerText = 0;
+	               } 
+	            }
+            }
+		     }
+		     
+		     S11.onclick = function(){
+		       if(S11.checked){
+		         S12.checked = true;
+		       }else{
+		         S12.checked = false;
+		       } 
+		       add();
+		       dec();
+		     }
+		     
+		     S12.onclick = function(){
+		       if(S12.checked){
+		         S11.checked = true;
+		       }else{
+		         S11.checked = false;
+		       } 
+		       
+		     }
+		     S13.onclick = function(){
+		       if(S13.checked){
+		         S14.checked = true;
+		       }else{
+		         S14.checked = false;
+		       } 
+		       add();
+		       dec();
+		     }
+		      S14.onclick = function(){
+		       if(S14.checked){
+		         S13.checked = true;
+		       }else{
+		         S13.checked = false;
+		       } 
+		       
+		     }
+		      
+		    var aItem = document.getElementsByName("checkbox1");
+		    All.onclick = function(){
+			    if(All.checked){//判断是不是选中的
+				     setChecked(true);
+			    }else{
+				    setChecked(false);
+			    }
+			    add();
+		      dec();
+		    }
+		    //设置复选框选中/取消
+		    function setChecked(b){
+			  for(var i=0; i<aItem.length; i++){
+				  aItem[i].checked = b;
+			   }
+		   }
+//		   function money(){
+//		     var PRICE;
+//		     var MON;
+//		     for(var i=0;i<Mon.length;i++){ //价格
+//		       // Mon[i].index = i;
+//          PRICE = Mon[i].innerText;
+//		      //  console.log(PRICE);
+//		     }
+//		     for(var j=0;j<Jie.length;j++){ //节省
+//		           MON = Jie[j].innerText;
+//		      }
+//		     
+//		   }
+//     money();
       </script>
           <!--代码块-->
         </div>
@@ -349,20 +356,6 @@
       </div>
     </div>
 
-    <script src="./lib/jquery-2.1.4.js"></script>
-<script src="./lib/fastclick.js"></script>
-<script>
-  $(function() {
-    FastClick.attach(document.body);
-  });
-</script>
-<script src="./js/jquery-weui.js"></script>
-
-    <script>
-      $("#a").select({
-        title: "选择职业",
-        items: ["法官", "医生", "猎人", "学生", "记者", "其他"]
-      });
-    </script>
+<script src="./lib/jquery-2.1.4.js"></script>
   </body>
 </html>
